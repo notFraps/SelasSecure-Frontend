@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, ChevronDown, Calendar, Briefcase, HeartHandshake, ShieldAlert, Award, FileSpreadsheet, Activity, HelpCircle, User } from "lucide-react";
+import { Menu, X, ChevronDown, Calendar, Briefcase, HeartHandshake, ShieldAlert, Award, FileSpreadsheet, HelpCircle, User, UsersRound, CalendarHeart, FileHeart, ShieldBan } from "lucide-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,21 +12,21 @@ export default function Header() {
 
   const services = [
     {
-      name: "Personal & Family Planning",
-      href: "/personal-family-financial-planning",
+      name: "Personal Financial Planning",
+      href: "/personal-financial-planning",
       desc: "Tailored long-term wealth strategy",
       icon: HeartHandshake,
     },
     {
-      name: "Divorce Financial Planning",
-      href: "/divorce-financial-planning",
-      desc: "Chartered divorce support (CFDS)",
+      name: "Family Financial Planning",
+      href: "/family-financial-planning",
+      desc: "Comprehensive family financial solutions",
       icon: ShieldAlert,
     },
     {
-      name: "Insurance Planning",
-      href: "/insurance",
-      desc: "Protecting families and liabilities",
+      name: "Corporate Financial Planning",
+      href: "/corporate-financial-planning",
+      desc: "Strategic financial solutions for businesses",
       icon: Award,
     },
     {
@@ -36,20 +36,38 @@ export default function Header() {
       icon: Briefcase,
     },
     {
-      name: "Group Benefits & RRSP",
+      name: "RRSP TFSA & FHSA Optimization",
       href: "/group-benefits-rrsp",
       desc: "Custom employee retention plans",
       icon: FileSpreadsheet,
     },
     {
-      name: "Health Spending Accounts",
-      href: "/hsa",
-      desc: "Tax-efficient medical expense accounts",
-      icon: Activity,
+      name: "Group Benefits",
+      href: "/group-benefits-rrsp",
+      desc: "Custom employee retention plans",
+      icon: UsersRound,
+    },
+    {
+      name: "Health Spending Accounts (HSA)",
+      href: "/health-plans",
+      desc: "Supplemental health coverage",
+      icon: FileHeart,
     },
     {
       name: "Health Plans",
       href: "/health-plans",
+      desc: "Supplemental health coverage",
+      icon: CalendarHeart,
+    },
+    {
+      name: "Insurance Planning",
+      href: "/insurance",
+      desc: "Protecting families and liabilities",
+      icon: ShieldBan,
+    },
+    {
+      name: "Other Services",
+      href: "/other-services",
       desc: "Supplemental health coverage",
       icon: HelpCircle,
     },
@@ -65,19 +83,12 @@ export default function Header() {
               <Image
                 src="/logo.jpg"
                 alt="SelasSecure Financial Logo"
-                width={52}
+                width={102}
                 height={52}
                 className="rounded-full shadow-sm border border-brand-muted"
                 priority
               />
-              <div className="flex flex-col">
-                <span className="text-xl font-bold tracking-tight text-brand-blue font-serif leading-none">
-                  SELASECURE
-                </span>
-                <span className="text-xs font-semibold tracking-widest text-brand-green uppercase mt-0.5">
-                  FINANCIAL
-                </span>
-              </div>
+              
             </Link>
           </div>
 
@@ -88,7 +99,7 @@ export default function Header() {
               className="text-sm font-semibold text-slate-700 hover:text-brand-blue transition-colors flex items-center gap-1.5"
             >
               <User className="w-4 h-4 text-slate-400" />
-              Meet the Team
+              About Us
             </Link>
 
             {/* Dropdown Menu - Services */}

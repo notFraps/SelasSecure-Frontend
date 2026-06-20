@@ -3,7 +3,15 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Calendar as CalendarIcon, Clock, CheckCircle, Info, ChevronRight, Laptop, MapPin } from "lucide-react";
+import {
+  Calendar as CalendarIcon,
+  Clock,
+  CheckCircle,
+  Info,
+  ChevronRight,
+  Laptop,
+  MapPin,
+} from "lucide-react";
 
 export default function BookNow() {
   const [selectedDay, setSelectedDay] = useState<number | null>(null);
@@ -34,7 +42,9 @@ export default function BookNow() {
     "4:00 PM - 4:45 PM",
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -51,33 +61,46 @@ export default function BookNow() {
   return (
     <>
       <Header />
-      
+
       <main className="flex-grow bg-slate-50/50">
         <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            
             {/* Left Column: Intro */}
             <div className="lg:col-span-5 space-y-6">
               <h1 className="text-3xl font-bold font-serif text-brand-blue leading-tight md:text-4xl">
                 Book an Appointment
               </h1>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Take the next step toward your financial goals. Whether you’re planning for retirement, growing your investments, or exploring insurance solutions, we are here to help. Let’s build a strategy that’s right for you, one that reflects your values and ambitions.
+                Take the next step toward your financial goals. Whether you’re
+                planning for retirement, growing your investments, or exploring
+                insurance solutions, we are here to help. Let’s build a strategy
+                that’s right for you, one that reflects your values and
+                ambitions.
               </p>
 
               <div className="space-y-4 pt-4 border-t border-slate-100">
                 <div className="flex gap-3">
                   <Laptop className="w-5 h-5 text-brand-lightblue shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="text-xs font-bold text-brand-blue uppercase tracking-wider">Virtual Zoom Consults</h3>
-                    <p className="text-[11px] text-slate-500 mt-0.5">Available for clients residing anywhere in Alberta and British Columbia.</p>
+                    <h3 className="text-xs font-bold text-brand-blue uppercase tracking-wider">
+                      Virtual Consults
+                    </h3>
+                    <p className="text-[11px] text-slate-500 mt-0.5">
+                      Available for clients residing in Canada and the US.
+                    </p>
                   </div>
                 </div>
                 <div className="flex gap-3">
                   <MapPin className="w-5 h-5 text-brand-green shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="text-xs font-bold text-brand-blue uppercase tracking-wider">In-Person Consultation</h3>
-                    <p className="text-[11px] text-slate-500 mt-0.5">Serving Calgary, Airdrie, Okotoks, and High River at our physical office spaces.</p>
+                    <h3 className="text-xs font-bold text-brand-blue uppercase tracking-wider">
+                      In-Person Consultation
+                    </h3>
+                    <p className="text-[11px] text-slate-500 mt-0.5">
+                      Available for clients in Ottawa and environs at our
+                      physical office spaces. Other physical locations will be
+                      updated.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -94,15 +117,24 @@ export default function BookNow() {
                     Consultation Booked!
                   </h2>
                   <div className="bg-slate-50 rounded-2xl p-5 border border-slate-100 text-xs text-slate-600 space-y-2 max-w-sm mx-auto">
-                    <p><strong>Meeting Type:</strong> {formData.meetingType}</p>
                     <p>
-                      <strong>Date:</strong> {selectedDayObj?.dayName}, {selectedDayObj?.month} {selectedDayObj?.dateNum}
+                      <strong>Meeting Type:</strong> {formData.meetingType}
                     </p>
-                    <p><strong>Time:</strong> {selectedTime}</p>
-                    <p><strong>Contact:</strong> {formData.name} ({formData.phone})</p>
+                    <p>
+                      <strong>Date:</strong> {selectedDayObj?.dayName},{" "}
+                      {selectedDayObj?.month} {selectedDayObj?.dateNum}
+                    </p>
+                    <p>
+                      <strong>Time:</strong> {selectedTime}
+                    </p>
+                    <p>
+                      <strong>Contact:</strong> {formData.name} (
+                      {formData.phone})
+                    </p>
                   </div>
                   <p className="text-xs text-slate-500 leading-normal max-w-xs mx-auto">
-                    A confirmation email and a calendar invite with Zoom links has been sent. Our team looks forward to meeting you!
+                    A confirmation email and a calendar invite with Zoom links
+                    has been sent. Our team looks forward to meeting you!
                   </p>
                   <button
                     onClick={() => {
@@ -185,7 +217,7 @@ export default function BookNow() {
                         <Info className="w-4 h-4 text-brand-lightblue" />
                         3. Fill Meeting Details
                       </label>
-                      
+
                       <div className="flex flex-col">
                         <input
                           type="text"
@@ -244,7 +276,6 @@ export default function BookNow() {
                 </form>
               )}
             </div>
-            
           </div>
         </section>
       </main>

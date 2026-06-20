@@ -1,13 +1,13 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
-import { Phone, Mail, MapPin, Laptop, Clock, ShieldCheck } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, ShieldCheck, Headset } from "lucide-react";
 
 export default function Contact() {
   return (
     <>
       <Header />
-      
+
       <main className="flex-grow bg-slate-50/50">
         {/* Page Header */}
         <section className="bg-brand-blue text-white py-16 md:py-20 relative overflow-hidden">
@@ -17,7 +17,8 @@ export default function Contact() {
               Contact Us
             </h1>
             <p className="text-sm md:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
-              We look forward to partnering with you on your financial journey. Drop us a message or request a consultation meeting.
+              We look forward to partnering with you on your financial journey.
+              Drop us a message or request a consultation meeting.
             </p>
           </div>
         </section>
@@ -26,30 +27,32 @@ export default function Contact() {
         <section className="py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-              
               {/* Left Column: Contact Coordinates */}
               <div className="lg:col-span-5 space-y-8">
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold font-serif text-brand-blue">
-                    SelasSecure Office Details
+                    SelaSecure Contact Details
                   </h2>
                   <p className="text-sm text-slate-500 leading-relaxed">
-                    Have questions about asset divisions, estate strategies, or corporate health benefits? Feel free to contact our Calgary office or our advisors directly.
+                    if you have questions about any of our services? Feel free
+                    to contact us directly.
                   </p>
                 </div>
 
                 {/* Contact List Card */}
                 <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-100 space-y-6">
-                  
                   {/* Address */}
                   <div className="flex items-start gap-4">
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-muted text-brand-green shrink-0">
                       <MapPin className="h-5 w-5" />
                     </div>
                     <div className="space-y-1">
-                      <p className="text-sm font-bold text-slate-800">Office Location</p>
+                      <p className="text-sm font-bold text-slate-800">
+                        Office Location
+                      </p>
                       <p className="text-xs text-slate-500 leading-normal">
-                        441, 12445 Lake Fraser Dr SE, Calgary, AB T2J-7A4
+                        Centerpointe Financial Centre, 84 Centerpointe Drive
+                        Ottawa, ON, K2G 6B1
                       </p>
                     </div>
                   </div>
@@ -60,12 +63,11 @@ export default function Contact() {
                       <Phone className="h-5 w-5" />
                     </div>
                     <div className="space-y-1">
-                      <p className="text-sm font-bold text-slate-800">Phone Numbers</p>
-                      <p className="text-xs text-slate-500 leading-normal">
-                        <strong>Trisha Argotoff:</strong> (587) 897-2336
+                      <p className="text-sm font-bold text-slate-800">
+                        Phone Number
                       </p>
                       <p className="text-xs text-slate-500 leading-normal">
-                        <strong>Robin Choi:</strong> (587) 577-1133
+                        +1 613 899 3398
                       </p>
                     </div>
                   </div>
@@ -76,12 +78,14 @@ export default function Contact() {
                       <Mail className="h-5 w-5" />
                     </div>
                     <div className="space-y-1">
-                      <p className="text-sm font-bold text-slate-800">Email Addresses</p>
-                      <p className="text-xs text-slate-500">
-                        trisha@selassecurefinancial.com
+                      <p className="text-sm font-bold text-slate-800">
+                        Email Addresses
                       </p>
                       <p className="text-xs text-slate-500">
-                        robin@selassecurefinancial.com
+                        info@selasecurefinancial.com
+                      </p>
+                      <p className="text-xs text-slate-500">
+                        enquiries@selasecurefinancial.com
                       </p>
                     </div>
                   </div>
@@ -92,7 +96,9 @@ export default function Contact() {
                       <Clock className="h-5 w-5" />
                     </div>
                     <div className="space-y-1">
-                      <p className="text-sm font-bold text-slate-800">Business Hours</p>
+                      <p className="text-sm font-bold text-slate-800">
+                        Business Hours
+                      </p>
                       <p className="text-xs text-slate-500">
                         Monday – Friday: 9:00 AM – 5:00 PM (MST)
                       </p>
@@ -101,19 +107,15 @@ export default function Contact() {
                       </p>
                     </div>
                   </div>
-
                 </div>
 
                 {/* Virtual Consult Disclosure */}
                 <div className="rounded-2xl bg-brand-muted p-5 border border-brand-lightblue/20 flex gap-4">
-                  <Laptop className="w-6 h-6 text-brand-blue shrink-0 mt-0.5" />
+                  <Headset className="w-6 h-6 text-brand-blue shrink-0 mt-0.5" />
                   <div className="space-y-1">
-                    <h4 className="text-xs font-bold text-brand-blue uppercase tracking-wider">
-                      Zoom & Virtual Consultations
-                    </h4>
-                    <p className="text-[11px] text-slate-600 leading-normal">
-                      We serve clients across Alberta and British Columbia virtually. Request a Zoom invite in your message body and we will prepare a conference link.
-                    </p>
+                    <h2 className="text-lg font-bold text-brand-blue uppercase tracking-wider">
+                      Book A Call
+                    </h2>
                   </div>
                 </div>
               </div>
@@ -122,7 +124,6 @@ export default function Contact() {
               <div className="lg:col-span-7">
                 <ContactForm />
               </div>
-
             </div>
           </div>
         </section>

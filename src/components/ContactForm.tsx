@@ -15,14 +15,15 @@ export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
   const services = [
-    "General Financial Planning",
-    "Personal & Family Planning",
-    "Divorce Financial Planning",
-    "Insurance Planning",
+    "Personal Financial Planning",
+    "Family Financial Planning",
+    "Corporate Financial Planning",
     "Estate Planning",
-    "Group Benefits & RRSP",
+    "RRSP TFSA & FHSA Optimization",
+    "Group Benefits",
     "Health Spending Accounts (HSA)",
     "Health Plans",
+    "Insurance Planning"
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

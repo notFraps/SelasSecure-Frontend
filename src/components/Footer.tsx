@@ -22,7 +22,6 @@ export default function Footer() {
     <footer className="w-full bg-[#031121] text-slate-300 border-t border-slate-800">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4 lg:gap-12">
-          
           {/* Column 1: Brand Info */}
           <div className="flex flex-col space-y-4">
             <Link href="/" className="flex items-center gap-3">
@@ -43,10 +42,12 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-sm text-slate-400 mt-2 font-serif italic">
-              "Secure. Generational. Wealth."
+              &quot;Secure. Generational. Wealth.&quot;
             </p>
             <p className="text-xs text-slate-400 leading-relaxed mt-2">
-              Empowering individuals, families, and businesses in Alberta and BC to build long-term financial confidence through collaboration and tailored planning.
+              Empowering individuals, families, and businesses in Cananda and
+              the US to build Secure, Generational Wealth through collaboration
+              and client-focused strategies.
             </p>
           </div>
 
@@ -57,33 +58,75 @@ export default function Footer() {
             </h3>
             <ul className="mt-4 space-y-2.5 text-sm">
               <li>
-                <Link href="/personal-family-financial-planning" className="hover:text-white transition-colors">
-                  Personal & Family Planning
+                <Link
+                  href="/personal-family-financial-planning"
+                  className="hover:text-white transition-colors"
+                >
+                  Personal Financial Planning
                 </Link>
               </li>
               <li>
-                <Link href="/divorce-financial-planning" className="hover:text-white transition-colors">
-                  Divorce Financial Planning (CFDS)
+                <Link
+                  href="/personal-family-financial-planning"
+                  className="hover:text-white transition-colors"
+                >
+                  Family Financial Planning
                 </Link>
               </li>
               <li>
-                <Link href="/insurance" className="hover:text-white transition-colors">
-                  Insurance Planning
+                <Link
+                  href="/corporate-financial-planning"
+                  className="hover:text-white transition-colors"
+                >
+                  Corporate Financial Planning
                 </Link>
               </li>
               <li>
-                <Link href="/estate-planning" className="hover:text-white transition-colors">
+                <Link
+                  href="/estate-planning"
+                  className="hover:text-white transition-colors"
+                >
                   Estate Planning
                 </Link>
               </li>
               <li>
-                <Link href="/group-benefits-rrsp" className="hover:text-white transition-colors">
-                  Group Benefits & RRSP
+                <Link
+                  href="/group-benefits-rrsp"
+                  className="hover:text-white transition-colors"
+                >
+                  RRSP TFSA & FHSA Optimization
                 </Link>
               </li>
               <li>
-                <Link href="/hsa" className="hover:text-white transition-colors">
+                <Link
+                  href="/group-benefits-rrsp"
+                  className="hover:text-white transition-colors"
+                >
+                  Group Benefits
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/hsa"
+                  className="hover:text-white transition-colors"
+                >
                   Health Spending Accounts (HSA)
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/group-benefits-rrsp"
+                  className="hover:text-white transition-colors"
+                >
+                  Health Plans
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/insurance"
+                  className="hover:text-white transition-colors"
+                >
+                  Insurance Planning
                 </Link>
               </li>
             </ul>
@@ -98,24 +141,21 @@ export default function Footer() {
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-5 h-5 text-brand-green shrink-0 mt-0.5" />
                 <span className="text-slate-400">
-                  441, 12445 Lake Fraser Dr SE,<br />Calgary, AB T2J-7A4
+                  Centerpointe Financial Centre, 84 Centerpointe Drive
+                  <br />
+                  Ottawa, ON, K2G 6B1
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-brand-green shrink-0" />
                 <div className="flex flex-col">
-                  <span className="text-slate-400">587-897-2336 (Trisha)</span>
-                  <span className="text-slate-400">587-577-1133 (Robin)</span>
+                  <span className="text-slate-400">+1 613 899 3398</span>
                 </div>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-brand-green shrink-0" />
-                <span className="text-slate-400">info@selassecurefinancial.com</span>
-              </li>
-              <li className="flex items-start gap-2.5 border-t border-slate-800 pt-3">
-                <Laptop className="w-4 h-4 text-brand-lightblue shrink-0 mt-0.5" />
-                <span className="text-xs text-slate-400 leading-normal">
-                  Serving Calgary, Airdrie, Okotoks, and High River in-person, and all other areas in AB & BC virtually via Zoom.
+                <span className="text-slate-400">
+                  info@selasecurefinancial.com
                 </span>
               </li>
             </ul>
@@ -127,9 +167,13 @@ export default function Footer() {
               Stay in the Loop
             </h3>
             <p className="text-xs text-slate-400 leading-normal">
-              Subscribe to our monthly newsletter to receive financial planning guides, tax tips, and market updates.
+              Subscribe to our monthly newsletter to receive financial planning
+              guides, tax-saving strategies, and market updates.
             </p>
-            <form onSubmit={handleSubscribe} className="relative mt-2 flex w-full">
+            <form
+              onSubmit={handleSubscribe}
+              className="relative mt-2 flex w-full"
+            >
               <input
                 type="email"
                 required
@@ -151,16 +195,21 @@ export default function Footer() {
               </p>
             )}
           </div>
-
         </div>
 
         {/* Footer Bottom Bar */}
         <div className="mt-16 border-t border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} SelasSecure Financial. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} SelaSecure Financial Inc. All rights
+            reserved.
+          </p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
-            <Link href="/faq" className="hover:text-slate-300">FAQ</Link>
-            <Link href="/contact" className="hover:text-slate-300">Contact</Link>
-            <Link href="/about-us" className="hover:text-slate-300">Privacy Policy</Link>
+            <Link href="/faq" className="hover:text-slate-300">
+              FAQ
+            </Link>
+            <Link href="/contact" className="hover:text-slate-300">
+              Contact
+            </Link>
           </div>
         </div>
       </div>
