@@ -198,7 +198,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center space-y-4 max-w-3xl mx-auto mb-10">
               <h2 className="text-3xl font-bold md:text-4xl font-serif text-brand-blue">
-                What Our Clients Say
+                Our Clients Testimonials
               </h2>
               <p className="text-slate-600">
                 Discover the peace of mind and success stories shared by
@@ -217,12 +217,13 @@ export default function Home() {
               {/* Text Info */}
               <div className="lg:col-span-5 space-y-6">
                 <h2 className="text-3xl font-bold md:text-4xl font-serif text-brand-blue">
-                  Begin Your Journey With Clarity
+                  Take Action to Begin Your Journey with Us
                 </h2>
                 <p className="text-slate-600 leading-relaxed">
-                  We look forward to helping you organize your assets and
-                  protect what matters most. Book a session or drop us a message
-                  using the form.
+                  We are excited to get to meet you and collaborate with you on
+                  your journey to secure generational wealth. Book a free
+                  consultation or send us a message using the form to get
+                  started.
                 </p>
 
                 <div className="space-y-4 pt-4 border-t border-slate-100">
@@ -232,10 +233,10 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="text-sm font-semibold text-slate-800">
-                        In-Person Consultations
+                        In-Person Concersations
                       </p>
                       <p className="text-xs text-slate-500 mt-0.5">
-                        Serving Calgary, Okotoks, Airdrie, and High River.
+                        Serving in Ottawa and surrounding areas.
                       </p>
                     </div>
                   </div>
@@ -245,10 +246,10 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="text-sm font-semibold text-slate-800">
-                        Virtual Meetings
+                        Virtual Consultations
                       </p>
                       <p className="text-xs text-slate-500 mt-0.5">
-                        Serving clients anywhere in Alberta and BC via Zoom.
+                        Serving clients anywhere Canada.
                       </p>
                     </div>
                   </div>

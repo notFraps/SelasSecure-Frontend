@@ -6,52 +6,52 @@ import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 export default function TestimonialsSlider() {
   const testimonials = [
     {
-      text: "We’ve been working with Robin and Trisha for nearly a year now, and the experience has been nothing short of outstanding. From the very beginning, they took the time to truly understand our financial goals, concerns, and priorities. Their thoughtful, personalized approach made us feel confident and supported every step of the way. What sets Robin and Trisha apart is their professionalism, transparency, and the way they make even complex financial matters easy to understand.",
-      author: "A.L.",
+      text: "We’ve had the pleasure of working with Esla and Victor for almost a year, and the experience has been truly exceptional. Right from the start, they invested time in understanding our financial objectives, concerns, and priorities. Their personalized and thoughtful guidance gave us confidence and reassurance throughout the process. What makes Robin and Trisha stand out is their professionalism, openness, and ability to simplify even the most complex financial topics.",
+      author: "E.N.",
     },
     {
-      text: "Trisha helped me find affordable life insurance that fit my needs perfectly and also made the process very easy. She answered all my questions and concerns and I signed up with confidence thanks to her!",
-      author: "S.M.",
+      text: "Esla guided me to the right life insurance plan that was both affordable and perfectly suited to my needs, while making the entire process simple and stress-free. He addressed every question and concern I had, and thanks to his support, I enrolled with complete confidence.",
+      author: "V.A.",
     },
     {
-      text: "Both my husband and I have had the pleasure doing business with Trisha and she was awesome! Super accommodating and even drove all the way to Cochrane several times to meet so we wouldn’t have to disrupt our childrens schedule. Definitely 5 star treatment.",
-      author: "K.S.M.",
+      text: "Both my husband and I have truly enjoyed working with Esla, and he was fantastic! He went out of his way to accommodate us, even driving to Cochrane multiple times so our children’s routine wouldn’t be interrupted. It felt like genuine five‑star service from start to finish.",
+      author: "M.K.",
     },
     {
-      text: "Robin and Trisha helped us get clarity in areas that were unclear, then helped put together a plan that moved us towards our goal. They're amazing to work with!",
-      author: "C.B.",
+      text: "Victor and Monique gave us clarity in areas we struggled to understand and then worked with us to build a plan that moved us closer to our goals. They’re truly wonderful partners to collaborate with!",
+      author: "D.M.",
     },
     {
-      text: "Trisha is so patient, knowledgeable and helpful!!! She has met us in Calgary multiple times, she has answered our questions (sometimes the same ones!) over and over and always given sound, thoughtful advice. She is very accommodating and really cares about her clients - I highly recommend her to everyone I know.",
-      author: "C.H.",
+      text: "Esla is incredibly patient, knowledgeable, and supportive! He has met with us in Calgary several times, always taking the time to answer our questions—even when we asked the same ones repeatedly—with thoughtful, reliable advice. His accommodating nature and genuine care for his clients truly stand out, and I recommend him wholeheartedly to everyone I know.",
+      author: "G.O.",
     },
     {
-      text: "Trisha is on top of it, when I ask questions I get quick replies, never disappointed.",
-      author: "L.K.",
+      text: "Esla is always prompt and reliable—whenever I reach out with questions, he responds quickly and consistently, leaving me completely satisfied.",
+      author: "M.O.",
     },
     {
-      text: "I have switched my RESP Advisor to Robin Choi. He was thorough and detailed in his explanations, and I appreciated how clearly he identified which product was the most suitable for me. I also plan to consult with him regarding other financial products.",
-      author: "G.R.",
+      text: "I recently switched my RESP advisor to Victor, and the experience has been excellent. He provided thorough, detailed explanations and clearly identified the product that best suited my needs. I truly valued his clarity, and I also look forward to consulting with him on other financial products in the future.",
+      author: "O.O.",
     },
     {
-      text: "Trisha has been a fantastic support over many years helping me plan and providing options for my family. She truly wants to help her clients reach their goals and is fast and friendly.",
-      author: "C.H. (Calgary)",
+      text: "Esla has been an incredible support over the years, guiding me with thoughtful planning and presenting options that truly fit my family’s needs. He genuinely cares about helping his clients achieve their goals, and his quick, friendly approach makes the experience seamless.",
+      author: "S.C.",
     },
     {
-      text: "Trisha is professional and cares about her clients!",
-      author: "T.W.",
+      text: "Victor is highly professional and genuinely dedicated to his clients!",
+      author: "E.A.",
     },
     {
-      text: "Trisha was very helpful and understanding of our needs. She spent many hours helping us make the right decision for now and for the future.",
-      author: "J.J.",
+      text: "Audrey was incredibly supportive and attentive to our needs. She dedicated many hours to guiding us toward the right choice—both for our present situation and for the future ahead.",
+      author: "C.O.",
     },
     {
-      text: "I am incredibly grateful to have Robin as my Financial Advisor guiding me on my financial journey. From the moment we started working together, I was impressed by his professionalism and genuine care for my financial well-being. He took the time to understand my goals and suggested a strategy that fits my situation.",
-      author: "D.B.",
+      text: "I feel truly fortunate to have Monique as my financial advisor, guiding me throughout my financial journey. From the very beginning, her professionalism and genuine concern for my financial well‑being stood out. She took the time to understand my goals and recommended a strategy that was perfectly suited to my situation.",
+      author: "I.E.",
     },
     {
-      text: "Trisha is a person of high integrity and always works in her clients' best interests. She doesn't attempt to oversell, keeping her clients' needs as her priority. As a mortgage broker, when my clients ask for a trusted licensed insurance advisor I recommend Trisha to them with 100% confidence.",
-      author: "V.L.",
+      text: "Glory is a professional of great integrity who consistently puts her clients’ best interests first. She never tries to oversell, always keeping her clients’ needs as her top priority. As a mortgage broker, whenever my clients ask for a trusted, licensed insurance advisor, I recommend Trisha with complete confidence.",
+      author: "D.T.",
     },
   ];
 
@@ -91,7 +91,7 @@ export default function TestimonialsSlider() {
         {/* Testimonial Content */}
         <div className="min-h-[160px] flex flex-col justify-between">
           <p className="text-lg md:text-xl text-slate-700 leading-relaxed font-medium italic">
-            "{testimonials[currentIndex].text}"
+            &quot;{testimonials[currentIndex].text}&quot;
           </p>
           <div className="mt-8 flex items-center gap-3">
             <div className="h-10 w-10 rounded-full bg-brand-muted border border-brand-lightblue flex items-center justify-center font-bold text-brand-blue text-sm">

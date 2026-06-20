@@ -71,11 +71,13 @@ export default function BookNow() {
                 Book an Appointment
               </h1>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Take the next step toward your financial goals. Whether you’re
-                planning for retirement, growing your investments, or exploring
-                insurance solutions, we are here to help. Let’s build a strategy
-                that’s right for you, one that reflects your values and
-                ambitions.
+                For individuals, families, and businesses alike, our commitment
+                is simple: helping you achieve financial security today while
+                creating generational wealth for tomorrow. Through bespoke
+                financial, investment, insurance, and business planning
+                strategies, we help you build, protect, and grow what matters
+                most. Contact us today and let&apos;s build a strategy
+                that&apos;s as unique as your vision for the future.
               </p>
 
               <div className="space-y-4 pt-4 border-t border-slate-100">
