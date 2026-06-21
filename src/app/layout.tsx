@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "SelaSecure Financial",
   description: "Created by John",
+  icons: {
+    icon: "/logonob.ico", // 👈 points to your logo in public/
+  },
 };
 
 export default function RootLayout({
