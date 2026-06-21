@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialsSlider from "@/components/TestimonialsSlider";
 import ContactForm from "@/components/ContactForm";
+import SplashScreen from "@/components/SplashScreen";
 import {
   ArrowRight,
   CheckCircle,
