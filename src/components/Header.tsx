@@ -3,29 +3,47 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, ChevronDown, Calendar, Briefcase, HeartHandshake, ShieldAlert, Award, FileSpreadsheet, HelpCircle, User, UsersRound, CalendarHeart, FileHeart, ShieldBan } from "lucide-react";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Calendar,
+  Briefcase,
+  HeartHandshake,
+  ShieldAlert,
+  Award,
+  FileSpreadsheet,
+  HelpCircle,
+  User,
+  UsersRound,
+  CalendarHeart,
+  FileHeart,
+  ShieldBan,
+} from "lucide-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [otherServiceInput, setOtherServiceInput] = useState("");
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
 
   const services = [
     {
       name: "Personal Financial Planning",
-      href: "/personal-financial-planning",
+      href: "/personal-family-financial-planning",
       desc: "Tailored long-term wealth strategy",
       icon: HeartHandshake,
     },
     {
       name: "Family Financial Planning",
-      href: "/family-financial-planning",
+      href: "/personal-family-financial-planning",
       desc: "Comprehensive family financial solutions",
       icon: ShieldAlert,
     },
     {
       name: "Corporate Financial Planning",
-      href: "/corporate-financial-planning",
+      href: "/personal-family-financial-planning",
       desc: "Strategic financial solutions for businesses",
       icon: Award,
     },
@@ -88,19 +106,52 @@ export default function Header() {
                 className="rounded-full shadow-sm border border-brand-muted"
                 priority
               />
-              
             </Link>
           </div>
 
           {/* Navigation Links - Desktop */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link
-              href="/about-us"
-              className="text-sm font-semibold text-slate-700 hover:text-brand-blue transition-colors flex items-center gap-1.5"
+            <div
+              className="relative"
+              onMouseEnter={() => setIsAboutOpen(true)}
+              onMouseLeave={() => setIsAboutOpen(false)}
             >
-              <User className="w-4 h-4 text-slate-400" />
-              About Us
-            </Link>
+              <button
+                className="flex items-center gap-1.5 text-sm font-semibold text-slate-700 hover:text-brand-blue transition-colors focus:outline-none"
+                aria-expanded={isAboutOpen}
+              >
+                <User className="w-4 h-4 text-slate-400" />
+                About Us
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-200 ${isAboutOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+
+              {isAboutOpen && (
+                <div className="absolute left-1/2 z-10 mt-1 w-56 -translate-x-1/2 rounded-2xl bg-white p-4 shadow-xl border border-slate-100 ring-1 ring-black/5 animate-in fade-in slide-in-from-top-2 duration-200">
+                  <div className="grid gap-2">
+                    <Link
+                      href="/about-us/vision"
+                      className="block rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-blue"
+                    >
+                      Vision
+                    </Link>
+                    <Link
+                      href="/about-us/mission"
+                      className="block rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-blue"
+                    >
+                      Mission
+                    </Link>
+                    <Link
+                      href="/about-us"
+                      className="block rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-blue"
+                    >
+                      Meet the Team
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* Dropdown Menu - Services */}
             <div
@@ -113,7 +164,9 @@ export default function Header() {
                 aria-expanded={isServicesOpen}
               >
                 Services
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? "rotate-180" : ""}`} />
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? "rotate-180" : ""}`}
+                />
               </button>
 
               {isServicesOpen && (
@@ -122,23 +175,60 @@ export default function Header() {
                     {services.map((item) => {
                       const Icon = item.icon;
                       return (
-                        <Link
+                        <div
                           key={item.name}
-                          href={item.href}
-                          className="flex items-start gap-3 rounded-xl p-2.5 transition-colors hover:bg-slate-50"
+                          className="relative group flex items-start gap-3 rounded-xl p-2.5 transition-colors hover:bg-slate-50 group"
                         >
-                          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-muted text-brand-blue shrink-0">
-                            <Icon className="h-5 w-5" />
-                          </div>
-                          <div>
-                            <p className="text-sm font-semibold text-brand-blue">
-                              {item.name}
-                            </p>
-                            <p className="text-xs text-slate-500 mt-0.5">
-                              {item.desc}
-                            </p>
-                          </div>
-                        </Link>
+                          {/* Normal link for every item */}
+                          <Link
+                            href={item.href}
+                            className="flex items-start gap-3 flex-1"
+                          >
+                            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-muted text-brand-blue shrink-0">
+                              <Icon className="h-5 w-5" />
+                            </div>
+                            <div>
+                              <p className="text-sm font-semibold text-brand-blue">
+                                {item.name}
+                              </p>
+                              <p className="text-xs text-slate-500 mt-0.5">
+                                {item.desc}
+                              </p>
+                            </div>
+                          </Link>
+
+                          {/* Extra dialogue box only for Other Services */}
+                          {item.name === "Other Services" && (
+                            <div className="dialogue-box hidden group-hover:block">
+                              <form
+                                onSubmit={(e) => {
+                                  e.preventDefault();
+                                  alert(`Submitted: ${otherServiceInput}`);
+                                }}
+                                className="space-y-2"
+                              >
+                                <label className="block text-sm font-medium text-slate-700">
+                                  Enter Info:
+                                </label>
+                                <input
+                                  type="text"
+                                  value={otherServiceInput}
+                                  onChange={(e) =>
+                                    setOtherServiceInput(e.target.value)
+                                  }
+                                  placeholder="Type here..."
+                                  className="w-full rounded-md border border-slate-300 px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue"
+                                />
+                                <button
+                                  type="submit"
+                                  className="mt-2 w-full rounded-md bg-brand-blue px-3 py-1.5 text-sm font-semibold text-white hover:bg-[#0e487d] transition-colors"
+                                >
+                                  Submit
+                                </button>
+                              </form>
+                            </div>
+                          )}
+                        </div>
                       );
                     })}
                   </div>
@@ -152,7 +242,7 @@ export default function Header() {
             >
               FAQ
             </Link>
-            
+
             <Link
               href="/contact"
               className="text-sm font-semibold text-slate-700 hover:text-brand-blue transition-colors"
@@ -179,7 +269,11 @@ export default function Header() {
               className="inline-flex items-center justify-center rounded-xl p-2 text-slate-700 hover:bg-slate-100 focus:outline-none"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -204,9 +298,11 @@ export default function Header() {
                 className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-base font-semibold text-slate-800 hover:bg-slate-50 hover:text-brand-blue"
               >
                 Services
-                <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${isMobileServicesOpen ? "rotate-180" : ""}`} />
+                <ChevronDown
+                  className={`h-5 w-5 transition-transform duration-200 ${isMobileServicesOpen ? "rotate-180" : ""}`}
+                />
               </button>
-              
+
               {isMobileServicesOpen && (
                 <div className="mt-1 ml-4 border-l-2 border-slate-100 pl-4 space-y-1">
                   {services.map((item) => (
@@ -230,7 +326,7 @@ export default function Header() {
             >
               FAQ
             </Link>
-            
+
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}

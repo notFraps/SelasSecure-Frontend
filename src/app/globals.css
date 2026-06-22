@@ -1,24 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
 
 @import "tailwindcss";
 
 :root {
   --background: #fbfcfd;
   --foreground: #0f172a;
-  
-  --font-serif: 'Libre Baskerville', Georgia, serif;
-  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
-  
-  --primary: #0a335c;      /* Logo Dark Blue */
-  --secondary: #63983a;    /* Logo Green */
-  --accent: #4fa0e0;       /* Logo Light Blue */
+
+  --font-serif: "Libre Baskerville", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  --primary: #0a335c; /* Logo Dark Blue */
+  --secondary: #63983a; /* Logo Green */
+  --accent: #4fa0e0; /* Logo Light Blue */
   --accent-muted: #f0f6fc;
 }
 
 @theme {
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
-  
+
   --color-brand-blue: var(--primary);
   --color-brand-green: var(--secondary);
   --color-brand-lightblue: var(--accent);
@@ -32,7 +32,12 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-serif);
   color: var(--primary);
 }
@@ -57,7 +62,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-gradient-green {
-  background: linear-gradient(135deg, var(--primary) 30%, var(--secondary) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary) 30%,
+    var(--secondary) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -85,3 +94,36 @@ h1, h2, h3, h4, h5, h6 {
   height: auto;
 }
 
+.dialogue-box {
+  display: none;              /* hidden by default */
+  position: absolute;         /* positioned relative to parent */
+  top: 0;                     /* align vertically with parent */
+  left: 100%;                 /* appear to the right of parent */
+  margin-left: 0.5rem;        /* small gap */
+  width: 16rem;               /* fixed width */
+  background: #ffffff;        /* white background */
+  border: 1px solid #e2e8f0;  /* light border */
+  border-radius: 0.5rem;      /* rounded corners */
+  padding: 0.75rem;           /* inner spacing */
+  font-size: 0.875rem;        /* text size */
+  color: #374151;             /* slate-700 text */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* subtle shadow */
+  z-index: 50;                /* ensure it sits above */
+  opacity: 0;                 /* invisible until hovered */
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateY(-4px); /* slight lift effect */
+}
+
+/* Show on hover */
+.group:hover .dialogue-box {
+  display: block;
+  opacity: 1;
+  transform: translateY(0); /* slide into place */
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

@@ -12,7 +12,10 @@ export default function ContactForm() {
     message: "",
   });
 
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
+  const [captchaChecked, setCaptchaChecked] = useState(false);
 
   const services = [
     "Personal Financial Planning",
@@ -23,20 +26,30 @@ export default function ContactForm() {
     "Group Benefits",
     "Health Spending Accounts (HSA)",
     "Health Plans",
-    "Insurance Planning"
+    "Insurance Planning",
   ];
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!captchaChecked) {
+      alert("Please confirm you are not a robot.");
+      return;
+    }
+
     setStatus("submitting");
 
-    // Simulate server side submission
     try {
+      // Simulate server side submission
       await new Promise((resolve) => setTimeout(resolve, 1500));
       setStatus("success");
       setFormData({
@@ -46,6 +59,7 @@ export default function ContactForm() {
         service: "General Financial Planning",
         message: "",
       });
+      setCaptchaChecked(false);
     } catch {
       setStatus("error");
     }
@@ -61,7 +75,8 @@ export default function ContactForm() {
           Message Sent Successfully!
         </h3>
         <p className="text-sm text-slate-500 mt-3 max-w-sm leading-relaxed">
-          Thank you for reaching out to SelasSecure Financial. A representative from our team will get in touch with you within 24 business hours.
+          Thank you for reaching out to SelasSecure Financial. A representative
+          from our team will get in touch with you within 24 business hours.
         </p>
         <button
           onClick={() => setStatus("idle")}
@@ -79,7 +94,10 @@ export default function ContactForm() {
       className="flex flex-col space-y-5 rounded-3xl bg-white p-8 md:p-10 shadow-lg border border-slate-100 transition-all duration-300"
     >
       <div className="flex flex-col">
-        <label htmlFor="name" className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+        <label
+          htmlFor="name"
+          className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2"
+        >
           Full Name
         </label>
         <input
@@ -96,7 +114,10 @@ export default function ContactForm() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="flex flex-col">
-          <label htmlFor="email" className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+          <label
+            htmlFor="email"
+            className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2"
+          >
             Email Address
           </label>
           <input
@@ -111,7 +132,10 @@ export default function ContactForm() {
           />
         </div>
         <div className="flex flex-col">
-          <label htmlFor="phone" className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+          <label
+            htmlFor="phone"
+            className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2"
+          >
             Phone Number
           </label>
           <input
@@ -128,7 +152,10 @@ export default function ContactForm() {
       </div>
 
       <div className="flex flex-col">
-        <label htmlFor="service" className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+        <label
+          htmlFor="service"
+          className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2"
+        >
           Service of Interest
         </label>
         <select
@@ -147,7 +174,10 @@ export default function ContactForm() {
       </div>
 
       <div className="flex flex-col">
-        <label htmlFor="message" className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+        <label
+          htmlFor="message"
+          className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2"
+        >
           How can we help?
         </label>
         <textarea
@@ -168,6 +198,20 @@ export default function ContactForm() {
           An error occurred. Please try again.
         </div>
       )}
+
+      {/* Checkbox CAPTCHA */}
+      <div className="flex items-center gap-2">
+        <input
+          type="checkbox"
+          id="captcha"
+          checked={captchaChecked}
+          onChange={(e) => setCaptchaChecked(e.target.checked)}
+          className="h-4 w-4 rounded border-slate-300 text-brand-blue focus:ring-brand-lightblue"
+        />
+        <label htmlFor="captcha" className="text-sm text-slate-700">
+          I am not a robot
+        </label>
+      </div>
 
       <button
         type="submit"
