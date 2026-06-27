@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -14,7 +14,6 @@ import {
   Award,
   FileSpreadsheet,
   HelpCircle,
-  User,
   UsersRound,
   CalendarHeart,
   FileHeart,
@@ -27,6 +26,33 @@ export default function Header() {
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [otherServiceInput, setOtherServiceInput] = useState("");
   const [isAboutOpen, setIsAboutOpen] = useState(false);
+
+  const aboutTimeout = useRef<NodeJS.Timeout | null>(null);
+  const servicesTimeout = useRef<NodeJS.Timeout | null>(null);
+
+  const handleAboutMouseEnter = () => {
+    if (aboutTimeout.current) {
+      clearTimeout(aboutTimeout.current);
+    }
+    setIsAboutOpen(true);
+  }
+  const handleAboutMouseLeave = () => {
+    aboutTimeout.current = setTimeout(() => {
+      setIsAboutOpen(false);
+    }, 200);
+  }
+
+  const handleServicesMouseEnter = () => {
+    if (servicesTimeout.current) {
+      clearTimeout(servicesTimeout.current);
+    }
+    setIsServicesOpen(true);
+  }
+  const handleServicesMouseLeave = () => {
+    servicesTimeout.current = setTimeout(() => {
+      setIsServicesOpen(false);
+    }, 300);
+  }
 
   const services = [
     {
@@ -66,27 +92,21 @@ export default function Header() {
       icon: UsersRound,
     },
     {
-      name: "Health Spending Accounts (HSA)",
+      name: "Health Insurance Planning",
       href: "/health-plans",
       desc: "Supplemental health coverage",
       icon: FileHeart,
     },
     {
-      name: "Health Plans",
+      name: "Life Insurance Planning",
       href: "/health-plans",
-      desc: "Supplemental health coverage",
+      desc: "Protecting families and liabilities",
       icon: CalendarHeart,
     },
     {
-      name: "Insurance Planning",
-      href: "/insurance",
-      desc: "Protecting families and liabilities",
-      icon: ShieldBan,
-    },
-    {
-      name: "Other Services",
+      name: "Other Financial Services",
       href: "/other-services",
-      desc: "Supplemental health coverage",
+      desc: "Other Complimentary Financial Services",
       icon: HelpCircle,
     },
   ];
@@ -103,7 +123,7 @@ export default function Header() {
                 alt="SelasSecure Financial Logo"
                 width={102}
                 height={52}
-                className="rounded-full shadow-sm border border-brand-muted"
+                className="rounded-full border-brand-muted"
                 priority
               />
             </Link>
@@ -113,14 +133,13 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-8">
             <div
               className="relative"
-              onMouseEnter={() => setIsAboutOpen(true)}
-              onMouseLeave={() => setIsAboutOpen(false)}
+              onMouseEnter={() => handleAboutMouseEnter()}
+              onMouseLeave={() => handleAboutMouseLeave()}
             >
               <button
                 className="flex items-center gap-1.5 text-sm font-semibold text-slate-700 hover:text-brand-blue transition-colors focus:outline-none"
                 aria-expanded={isAboutOpen}
               >
-                <User className="w-4 h-4 text-slate-400" />
                 About Us
                 <ChevronDown
                   className={`w-4 h-4 transition-transform duration-200 ${isAboutOpen ? "rotate-180" : ""}`}
@@ -156,8 +175,8 @@ export default function Header() {
             {/* Dropdown Menu - Services */}
             <div
               className="relative"
-              onMouseEnter={() => setIsServicesOpen(true)}
-              onMouseLeave={() => setIsServicesOpen(false)}
+              onMouseEnter={() => handleServicesMouseEnter()}
+              onMouseLeave={() => handleServicesMouseLeave()}
             >
               <button
                 className="flex items-center gap-1.5 text-sm font-semibold text-slate-700 hover:text-brand-blue transition-colors focus:outline-none"

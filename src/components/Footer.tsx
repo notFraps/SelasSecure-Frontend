@@ -46,7 +46,7 @@ export default function Footer() {
             </p>
             <p className="text-xs text-slate-400 leading-relaxed mt-2">
               Empowering individuals, families, and businesses in Cananda and
-              the US to build Secure, Generational Wealth through collaboration
+              the US to build Secure and Generational Wealth through collaboration
               and client-focused strategies.
             </p>
           </div>
@@ -110,7 +110,7 @@ export default function Footer() {
                   href="/hsa"
                   className="hover:text-white transition-colors"
                 >
-                  Health Spending Accounts (HSA)
+                  Health Insurance Planning
                 </Link>
               </li>
               <li>
@@ -118,7 +118,7 @@ export default function Footer() {
                   href="/group-benefits-rrsp"
                   className="hover:text-white transition-colors"
                 >
-                  Health Plans
+                  Life Insurance Planning
                 </Link>
               </li>
               <li>
@@ -135,15 +135,16 @@ export default function Footer() {
           {/* Column 3: Contact Details & Office */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
-              Contact & Coverage
+              Contact
             </h3>
             <ul className="mt-4 space-y-3.5 text-sm">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-5 h-5 text-brand-green shrink-0 mt-0.5" />
                 <span className="text-slate-400">
-                  Centerpointe Financial Centre, 84 Centerpointe Drive
+                  Centerpointe Financial Centre, <br />
+                  84 Centerpointe Drive,
                   <br />
-                  Ottawa, ON, K2G 6B1
+                  Ottawa, ON, K2G 6B1.
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
@@ -156,6 +157,8 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-brand-green shrink-0" />
                 <span className="text-slate-400">
                   info@selasecurefinancial.com
+                  <br />
+                  enquiries@selasecurefinancial.com
                 </span>
               </li>
             </ul>

@@ -27,6 +27,7 @@ export default function ContactForm() {
     "Health Spending Accounts (HSA)",
     "Health Plans",
     "Insurance Planning",
+    "Other Financial Services",
   ];
 
   const handleChange = (

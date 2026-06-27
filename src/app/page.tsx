@@ -6,11 +6,12 @@ import TestimonialsSlider from "@/components/TestimonialsSlider";
 import ContactForm from "@/components/ContactForm";
 import {
   ArrowRight,
-  CheckCircle,
   Shield,
   TrendingUp,
   Users,
   Calendar,
+  MapPin,
+  Laptop,
 } from "lucide-react";
 
 export default function Home() {
@@ -54,9 +55,9 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 -z-10 h-[500px] w-[500px] rounded-full bg-slate-100 opacity-60 blur-3xl" />
 
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
+            <div className="grid grid-cols-1 gap-2 lg:grid-cols-12 lg:items-center">
               {/* Hero Left Content */}
-              <div className="space-y-6 lg:col-span-7">
+              <div className="space-y-6 lg:col-span-6">
                 <div className="inline-flex items-center gap-2 rounded-full bg-brand-muted px-4 py-1.5 text-sm font-semibold text-brand-blue border border-brand-lightblue/20">
                   <Shield className="w-4 h-4 text-brand-green" />
                   Your Trusted Financial Partners
@@ -64,12 +65,13 @@ export default function Home() {
                 <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl font-serif text-brand-blue leading-[1.1]">
                   Financial Planning <br />
                   and Advice in <br />
-                  <span className="text-gradient">Canada and the US</span>
+                  <span className="text-gradient">Canada and the USA</span>
                 </h1>
                 <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
                   We guide individuals, families, and business owners through
                   comprehensive planning, custom group benefits for employees
-                  and other personal, family, and coporate financial strategies.
+                  and other personal, family, and corporate financial
+                  strategies.
                 </p>
                 <div className="flex flex-wrap gap-4 pt-3">
                   <Link
@@ -90,28 +92,27 @@ export default function Home() {
               </div>
 
               {/* Hero Right Graphic */}
-              <div className="lg:col-span-5 flex justify-center">
-                <div className="relative w-full max-w-md aspect-square rounded-[2.5rem] bg-gradient-to-tr from-brand-blue to-brand-lightblue p-8 shadow-2xl shadow-brand-blue/20 flex flex-col justify-between overflow-hidden">
+              <div className="lg:col-span-6 flex justify-center">
+                <div className="relative w-full max-w-xl aspect-square rounded-[2.5rem] bg-gradient-to-tr from-brand-blue to-brand-lightblue p-6 shadow-2xl shadow-brand-blue/20 flex flex-col overflow-hidden">
                   {/* Decorative curved shape resembling the logo ground line */}
-                  <div className="absolute -bottom-10 -left-10 -right-10 h-32 bg-brand-green/20 rounded-full blur-2xl -z-0" />
 
-                  <div className="z-10 flex items-center justify-between">
-                    <div className="flex items-center gap-2">
+                  <div className="z-5 flex items-center bg-white rounded-[2.5rem] justify-center">
+                    <div className="flex gap-2">
                       <Image
                         src="/logo.jpg"
                         alt="Logo"
-                        width={250}
-                        height={180}
-                        className="rounded-full bg-white border border-white"
+                        width={350}
+                        height={200}
+                        className=" bg-white border border-white"
                       />
                     </div>
                   </div>
 
-                  <div className="z-10 text-white space-y-3">
-                    <p className="text-lg font-semibold tracking-wider uppercase text-brand-green">
+                  <div className="z-10 text-white py-4 space-y-3">
+                    <p className="text-2xl font-semibold tracking-wider uppercase text-brand-green">
                       Our Core Mandate
                     </p>
-                    <p className="text-md text-white/80 leading-relaxed font-sans font-light">
+                    <p className="text-lg py-2 text-white/80 leading-relaxed font-sans font-light">
                       Working with our partners to build secure and generational
                       wealth for our clients.
                     </p>
@@ -168,12 +169,12 @@ export default function Home() {
               </h2>
               <p className="text-slate-600">
                 Financial planning can feel overwhelming and complex. We
-                simplify this carrying you alone every step of the way as we
+                simplify this by carrying you along every step of the way as we
                 build your bespoke long-term financial strategy.
               </p>
             </div>
 
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-5 gap-6">
+            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
               {steps.map((s, idx) => (
                 <div
                   key={s.num}
@@ -185,7 +186,7 @@ export default function Home() {
                   <h3 className="text-lg pt-4 font-bold text-brand-blue font-serif mt-4">
                     {s.title}
                   </h3>
-                  <p className="text-xs text-slate-500 mt-3 leading-relaxed">
+                  <p className="text-sm text-slate-500 mt-3 leading-relaxed">
                     {s.desc}
                   </p>
                 </div>
@@ -198,7 +199,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center space-y-4 max-w-3xl mx-auto mb-10">
               <h2 className="text-3xl font-bold md:text-4xl font-serif text-brand-blue">
-                Our Clients Testimonials
+                Our Client Testimonials
               </h2>
               <p className="text-slate-600">
                 Discover the peace of mind and success stories shared by
@@ -227,29 +228,27 @@ export default function Home() {
                 </p>
 
                 <div className="space-y-4 pt-4 border-t border-slate-100">
-                  <div className="flex items-start gap-3.5">
-                    <div className="flex h-5 w-5 items-center justify-center rounded-full bg-brand-muted text-brand-green mt-0.5">
-                      <CheckCircle className="h-3 w-3" />
-                    </div>
+                  <div className="flex gap-3">
+                    <Laptop className="w-5 h-5 text-brand-lightblue shrink-0 mt-0.5" />
                     <div>
-                      <p className="text-sm font-semibold text-slate-800">
-                        In-Person Concersations
-                      </p>
-                      <p className="text-xs text-slate-500 mt-0.5">
-                        Serving in Ottawa and surrounding areas.
+                      <h3 className="text-xs font-bold text-brand-blue uppercase tracking-wider">
+                        Virtual Consultation
+                      </h3>
+                      <p className="text-[11px] text-slate-500 mt-0.5">
+                        Available for clients residing in Canada and the USA.
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3.5">
-                    <div className="flex h-5 w-5 items-center justify-center rounded-full bg-brand-muted text-brand-green mt-0.5">
-                      <CheckCircle className="h-3 w-3" />
-                    </div>
+                  <div className="flex gap-3">
+                    <MapPin className="w-5 h-5 text-brand-green shrink-0 mt-0.5" />
                     <div>
-                      <p className="text-sm font-semibold text-slate-800">
-                        Virtual Consultations
-                      </p>
-                      <p className="text-xs text-slate-500 mt-0.5">
-                        Serving clients anywhere Canada.
+                      <h3 className="text-xs font-bold text-brand-blue uppercase tracking-wider">
+                        In-Person Consultation
+                      </h3>
+                      <p className="text-[11px] text-slate-500 mt-0.5">
+                        Available for clients in Ottawa and environs at our
+                        physical office spaces. Other physical locations will be
+                        updated.
                       </p>
                     </div>
                   </div>

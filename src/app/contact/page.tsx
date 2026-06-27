@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import { Phone, Mail, MapPin, Clock, ShieldCheck, Headset } from "lucide-react";
+import Link from "next/link";
 
 export default function Contact() {
   return (
@@ -31,10 +32,10 @@ export default function Contact() {
               <div className="lg:col-span-5 space-y-8">
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold font-serif text-brand-blue">
-                    SelaSecure Contact Details
+                    SelaSecure Financial Contact Details
                   </h2>
                   <p className="text-sm text-slate-500 leading-relaxed">
-                    if you have questions about any of our services? Feel free
+                    If you have questions about any of our services? Feel free
                     to contact us directly.
                   </p>
                 </div>
@@ -51,7 +52,8 @@ export default function Contact() {
                         Office Location
                       </p>
                       <p className="text-xs text-slate-500 leading-normal">
-                        Centerpointe Financial Centre, 84 Centerpointe Drive
+                        Centerpointe Financial Centre, <br />
+                        84 Centerpointe Drive <br />
                         Ottawa, ON, K2G 6B1
                       </p>
                     </div>
@@ -100,24 +102,27 @@ export default function Contact() {
                         Business Hours
                       </p>
                       <p className="text-xs text-slate-500">
-                        Monday – Friday: 9:00 AM – 5:00 PM (MST)
+                        Monday – Friday: 9:00 AM – 5:00 PM (ET)
                       </p>
                       <p className="text-xs text-slate-500">
-                        Weekend consultations available by request
+                        Weekend consultations available on request
                       </p>
                     </div>
                   </div>
                 </div>
 
                 {/* Virtual Consult Disclosure */}
-                <div className="rounded-2xl bg-brand-muted p-5 border border-brand-lightblue/20 flex gap-4">
-                  <Headset className="w-6 h-6 text-brand-blue shrink-0 mt-0.5" />
-                  <div className="space-y-1">
-                    <h2 className="text-lg font-bold text-brand-blue uppercase tracking-wider">
-                      Book A Call
-                    </h2>
+                <Link href="/book-now">
+                  <div className="rounded-2xl bg-brand-muted p-5 border border-brand-lightblue/20 flex gap-4">
+                    <Headset className="w-6 h-6 text-brand-blue shrink-0 mt-0.5" />
+
+                    <div className="space-y-1">
+                      <h2 className="text-lg font-bold text-brand-blue uppercase tracking-wider">
+                        Book A Call
+                      </h2>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
 
               {/* Right Column: Contact Form */}

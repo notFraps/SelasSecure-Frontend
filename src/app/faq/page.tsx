@@ -4,7 +4,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { HelpCircle, ChevronDown, Plus, Minus, Search, Calendar, ChevronRight } from "lucide-react";
+import { Plus, Minus, Search, Calendar, ChevronRight } from "lucide-react";
 
 export default function FAQ() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -49,43 +49,6 @@ export default function FAQ() {
       ],
     },
     {
-      name: "Divorce Financial Planning",
-      items: [
-        {
-          q: "What does a Chartered Financial Divorce Specialist (CFDS) do?",
-          a: "A CFDS helps you understand the financial implications of divorce. From dividing assets to analyzing future affordability, we bring clarity to your financial options before, during, and after the divorce process.",
-        },
-        {
-          q: "How is a CFDS different from a divorce lawyer?",
-          a: "A lawyer provides legal advice and representation. A CFDS focuses on the financial side of divorce — including property division, tax consequences, and long-term impacts. We often work alongside your lawyer to support your case.",
-        },
-        {
-          q: "When should I involve a financial professional in the divorce process?",
-          a: "The earlier, the better. A CFDS can help you make informed decisions before settlement negotiations begin, giving you a clearer understanding of what’s at stake.",
-        },
-        {
-          q: "Can you help me understand if I can afford to keep the house after divorce?",
-          a: "Yes. We’ll assess your full financial picture, including income, expenses, debt, and potential support payments, to determine if keeping the home is realistic — both now and in the future.",
-        },
-        {
-          q: "Will you work with my lawyer or mediator?",
-          a: "Absolutely. We collaborate with legal and mediation professionals to ensure the financial aspects of your case are well-supported and clearly documented.",
-        },
-        {
-          q: "What documents do I need to provide for divorce financial planning?",
-          a: "Typically, we will ask for income statements, tax returns, bank account balances, investment accounts, debts, and pension details. Don’t worry — we’ll provide a checklist to make this easier.",
-        },
-        {
-          q: "Can you appear as an expert witness if my case goes to court?",
-          a: "Yes. If needed, we can provide expert testimony in court, mediation, or arbitration settings to support the financial aspects of your case.",
-        },
-        {
-          q: "Do you help with post-divorce financial planning?",
-          a: "Yes. Once your divorce is finalized, we help you rebuild with a plan tailored to your new reality — including budgeting, credit repair, investment strategies, and retirement planning.",
-        },
-      ],
-    },
-    {
       name: "Working With SelasSecure Financial",
       items: [
         {
@@ -106,7 +69,20 @@ export default function FAQ() {
         },
         {
           q: "How do I get started?",
-          a: "Simply book your free introductory call or reach out via our contact page. We would love to help you begin your journey with clarity and confidence.",
+          a: (
+            <>
+              &quot;Simply book your free introductory call or reach out via our
+              <Link
+                href="/contact"
+                className="text-brand-blue font-semibold hover:undeline"
+              >
+                {" "}
+                contact form
+              </Link>
+              . We would love to help you begin your journey with clarity and
+              confidence.&quot;,
+            </>
+          ),
         },
       ],
     },
@@ -119,7 +95,7 @@ export default function FAQ() {
   return (
     <>
       <Header />
-      
+
       <main className="flex-grow bg-slate-50/50">
         {/* Page Header */}
         <section className="bg-brand-blue text-white py-16 md:py-20 relative overflow-hidden">
@@ -129,9 +105,12 @@ export default function FAQ() {
               Frequently Asked Questions
             </h1>
             <p className="text-sm md:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
-              Find quick answers to common questions about personal planning, divorce specialization, and our collaborative advisory services.
+              Find quick answers to common questions about personal planning,
+              comprehensive planning, custom group benefits for employees and
+              other personal, family, and corporate financial strategies and our
+              collaborative advisory services.
             </p>
-            
+
             {/* Search Input */}
             <div className="relative max-w-md mx-auto mt-6">
               <Search className="absolute left-4 top-3.5 h-5 w-5 text-slate-400" />
@@ -155,7 +134,7 @@ export default function FAQ() {
                 const filteredItems = cat.items.filter(
                   (item) =>
                     item.q.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                    item.a.toLowerCase().includes(searchQuery.toLowerCase())
+                    item.a.toLowerCase().includes(searchQuery.toLowerCase()),
                 );
 
                 if (filteredItems.length === 0) return null;
@@ -165,7 +144,7 @@ export default function FAQ() {
                     <h2 className="text-xl md:text-2xl font-bold font-serif text-brand-blue border-b border-slate-200 pb-3">
                       {cat.name}
                     </h2>
-                    
+
                     <div className="space-y-4">
                       {filteredItems.map((item, itemIdx) => {
                         const uniqueId = `${catIdx}-${itemIdx}`;
@@ -186,7 +165,7 @@ export default function FAQ() {
                                 <Plus className="h-5 w-5 text-brand-lightblue shrink-0" />
                               )}
                             </button>
-                            
+
                             {/* Accordion Expansion */}
                             {isOpen && (
                               <div className="px-5 pb-6 text-xs md:text-sm text-slate-500 leading-relaxed border-t border-slate-50 pt-4 bg-slate-50/30 animate-in fade-in duration-300">
@@ -211,7 +190,8 @@ export default function FAQ() {
               Still Have Questions?
             </h2>
             <p className="text-slate-600 text-sm leading-relaxed max-w-xl mx-auto">
-              Our financial planners are ready to help. Book a session or drop us a message via our contact form.
+              We are ready to help you. Book a session or drop us a message via
+              our contact form.
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-2">
               <Link
@@ -219,7 +199,7 @@ export default function FAQ() {
                 className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-blue to-[#0e487d] px-6 py-3 font-bold text-white shadow-md hover:shadow-lg transition-all"
               >
                 <Calendar className="w-4 h-4" />
-                Book Intro Call
+                Book a Call
               </Link>
               <Link
                 href="/contact"

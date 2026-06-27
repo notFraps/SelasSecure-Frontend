@@ -70,7 +70,7 @@ export default function TestimonialsSlider() {
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 7000);
+    const timer = setInterval(nextSlide, 10000);
     return () => clearInterval(timer);
   }, [nextSlide]);
 

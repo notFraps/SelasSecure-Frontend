@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { InlineWidget } from "react-calendly";
 import {
   Calendar as CalendarIcon,
   Clock,
@@ -85,10 +86,10 @@ export default function BookNow() {
                   <Laptop className="w-5 h-5 text-brand-lightblue shrink-0 mt-0.5" />
                   <div>
                     <h3 className="text-xs font-bold text-brand-blue uppercase tracking-wider">
-                      Virtual Consults
+                      Virtual Consultation
                     </h3>
                     <p className="text-[11px] text-slate-500 mt-0.5">
-                      Available for clients residing in Canada and the US.
+                      Available for clients residing in Canada and the USA.
                     </p>
                   </div>
                 </div>
@@ -261,7 +262,7 @@ export default function BookNow() {
                           className="rounded-xl border border-slate-200 px-4 py-2.5 text-sm text-slate-800 focus:border-brand-lightblue focus:ring-1 focus:ring-brand-lightblue focus:outline-none bg-slate-50/50"
                         >
                           <option>Virtual (Zoom Call)</option>
-                          <option>In-Person (Calgary Office)</option>
+                          <option>In-Person</option>
                           <option>Phone Call</option>
                         </select>
                       </div>
