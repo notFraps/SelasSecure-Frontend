@@ -18,7 +18,7 @@ export default function TestimonialsSlider() {
       author: "M.K.",
     },
     {
-      text: "Victor and Monique gave us clarity in areas we struggled to understand and then worked with us to build a plan that moved us closer to our goals. They’re truly wonderful partners to collaborate with!",
+      text: "Victor and Esla gave us clarity in areas we struggled to understand and then worked with us to build a plan that moved us closer to our goals. They’re truly wonderful partners to collaborate with!",
       author: "D.M.",
     },
     {
@@ -42,15 +42,15 @@ export default function TestimonialsSlider() {
       author: "E.A.",
     },
     {
-      text: "Audrey was incredibly supportive and attentive to our needs. She dedicated many hours to guiding us toward the right choice—both for our present situation and for the future ahead.",
+      text: "Esla was incredibly supportive and attentive to our needs. He dedicated many hours to guiding us toward the right choice—both for our present situation and for the future ahead.",
       author: "C.O.",
     },
     {
-      text: "I feel truly fortunate to have Monique as my financial advisor, guiding me throughout my financial journey. From the very beginning, her professionalism and genuine concern for my financial well‑being stood out. She took the time to understand my goals and recommended a strategy that was perfectly suited to my situation.",
+      text: "I feel truly fortunate to have Esla as my financial advisor, guiding me throughout my financial journey. From the very beginning, his professionalism and genuine concern for my financial well‑being stood out. He took the time to understand my goals and recommended a strategy that was perfectly suited to my situation.",
       author: "I.E.",
     },
     {
-      text: "Glory is a professional of great integrity who consistently puts her clients’ best interests first. She never tries to oversell, always keeping her clients’ needs as her top priority. As a mortgage broker, whenever my clients ask for a trusted, licensed insurance advisor, I recommend Trisha with complete confidence.",
+      text: "Esla is a professional of great integrity who consistently puts his clients’ best interests first. He never tries to oversell, always keeping his clients’ needs as his top priority. As a mortgage broker, whenever my clients ask for a trusted, licensed insurance advisor, I recommend Trisha with complete confidence.",
       author: "D.T.",
     },
   ];

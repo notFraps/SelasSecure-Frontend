@@ -134,7 +134,7 @@ export default function FAQ() {
                 const filteredItems = cat.items.filter(
                   (item) =>
                     item.q.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                    item.a.toLowerCase().includes(searchQuery.toLowerCase()),
+                    (typeof item.a === "string" && item.a.toLowerCase().includes(searchQuery.toLowerCase())),
                 );
 
                 if (filteredItems.length === 0) return null;

@@ -24,9 +24,10 @@ export default function ContactForm() {
     "Estate Planning",
     "RRSP TFSA & FHSA Optimization",
     "Group Benefits",
-    "Health Spending Accounts (HSA)",
-    "Health Plans",
-    "Insurance Planning",
+    "Health Insurance Planning",
+    "Life Insurance Planning",
+    "Mortgage Referral",
+    "Debt Restructuring Referrals",
     "Other Financial Services",
   ];
 

@@ -126,7 +126,23 @@ export default function Footer() {
                   href="/insurance"
                   className="hover:text-white transition-colors"
                 >
-                  Insurance Planning
+                  Mortgage Referral
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/insurance"
+                  className="hover:text-white transition-colors"
+                >
+                  Debt Restructuring Referrals
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/other-financial-services"
+                  className="hover:text-white transition-colors"
+                >
+                  Other Financial Services
                 </Link>
               </li>
             </ul>

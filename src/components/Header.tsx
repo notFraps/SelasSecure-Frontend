@@ -17,7 +17,9 @@ import {
   UsersRound,
   CalendarHeart,
   FileHeart,
-  ShieldBan,
+  EarthIcon,
+  HandCoins,
+  Building
 } from "lucide-react";
 
 export default function Header() {
@@ -104,6 +106,24 @@ export default function Header() {
       icon: CalendarHeart,
     },
     {
+      name: "Mortgage Referral",
+      href: "/mortgage-referral",
+      desc: "Trusted mortgage referral services",
+      icon: HandCoins,
+    },
+    {
+      name: "Debt Restructuring Referrals",
+      href: "/debt-restructuring",
+      desc: "Professional debt management solutions",
+      icon: Building,
+    },
+    {
+      name: "USA Services",
+      href: "/usa-services",
+      desc: "Financial services for US clients",
+      icon: EarthIcon
+    },
+    {
       name: "Other Financial Services",
       href: "/other-services",
       desc: "Other Complimentary Financial Services",
@@ -121,7 +141,7 @@ export default function Header() {
               <Image
                 src="/logo.jpg"
                 alt="SelasSecure Financial Logo"
-                width={102}
+                width={82}
                 height={52}
                 className="rounded-full border-brand-muted"
                 priority
@@ -150,13 +170,13 @@ export default function Header() {
                 <div className="absolute left-1/2 z-10 mt-1 w-56 -translate-x-1/2 rounded-2xl bg-white p-4 shadow-xl border border-slate-100 ring-1 ring-black/5 animate-in fade-in slide-in-from-top-2 duration-200">
                   <div className="grid gap-2">
                     <Link
-                      href="/about-us/vision"
+                      href="/vision"
                       className="block rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-blue"
                     >
                       Vision
                     </Link>
                     <Link
-                      href="/about-us/mission"
+                      href="/mission"
                       className="block rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-blue"
                     >
                       Mission
@@ -215,38 +235,6 @@ export default function Header() {
                               </p>
                             </div>
                           </Link>
-
-                          {/* Extra dialogue box only for Other Services */}
-                          {item.name === "Other Services" && (
-                            <div className="dialogue-box hidden group-hover:block">
-                              <form
-                                onSubmit={(e) => {
-                                  e.preventDefault();
-                                  alert(`Submitted: ${otherServiceInput}`);
-                                }}
-                                className="space-y-2"
-                              >
-                                <label className="block text-sm font-medium text-slate-700">
-                                  Enter Info:
-                                </label>
-                                <input
-                                  type="text"
-                                  value={otherServiceInput}
-                                  onChange={(e) =>
-                                    setOtherServiceInput(e.target.value)
-                                  }
-                                  placeholder="Type here..."
-                                  className="w-full rounded-md border border-slate-300 px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue"
-                                />
-                                <button
-                                  type="submit"
-                                  className="mt-2 w-full rounded-md bg-brand-blue px-3 py-1.5 text-sm font-semibold text-white hover:bg-[#0e487d] transition-colors"
-                                >
-                                  Submit
-                                </button>
-                              </form>
-                            </div>
-                          )}
                         </div>
                       );
                     })}
