@@ -1,3 +1,4 @@
+/*
 <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-slate-100 space-y-6">
   <div className="flex flex-col sm:flex-row items-center gap-6 pb-6 border-b border-slate-100">
     <div className="h-24 w-24 rounded-full bg-brand-blue flex items-center justify-center text-white text-3xl font-bold font-serif shadow-inner shrink-0">
@@ -59,3 +60,4 @@
     </span>
   </div>
 </div>;
+*/
