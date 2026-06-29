@@ -28,7 +28,7 @@ export default function Home() {
     },
     {
       num: "3",
-      title: "Step 3: let's Strategize",
+      title: "Step 3: Let's Strategize",
       desc: "We collaborate with you to build your bespoke financial plan and strategies inline with our core mandate (Secure, Generatoinal, Wealth).",
     },
     {
