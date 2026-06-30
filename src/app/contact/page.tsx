@@ -118,7 +118,7 @@ export default function Contact() {
 
                     <div className="space-y-1">
                       <h2 className="text-lg font-bold text-brand-blue uppercase tracking-wider">
-                        Book A Call
+                        Book Free Consultation
                       </h2>
                     </div>
                   </div>

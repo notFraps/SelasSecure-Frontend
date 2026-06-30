@@ -99,7 +99,7 @@ export default function Home() {
                   <div className="z-5 flex items-center bg-white rounded-[2.5rem] justify-center">
                     <div className="flex gap-2">
                       <Image
-                        src="/logo.jpg"
+                        src="/company.png"
                         alt="Logo"
                         width={350}
                         height={200}
@@ -174,23 +174,47 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-              {steps.map((s, idx) => (
-                <div
-                  key={s.num}
-                  className="flex flex-col rounded-2xl border border-slate-100 bg-slate-50 p-6 relative hover:shadow-md hover:bg-white hover:border-brand-lightblue/20 transition-all group duration-300"
-                >
-                  <div className="absolute top-4 right-6 text-4xl font-extrabold text-slate-200 group-hover:text-brand-lightblue/35 transition-colors font-serif">
-                    0{s.num}
+            <div className="mt-16 space-y-6">
+              {/* First row: 3 steps */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {steps.slice(0, 3).map((s) => (
+                  <div
+                    key={s.num}
+                    className="flex flex-col rounded-2xl border border-slate-100 bg-slate-50 p-6 relative hover:shadow-md hover:bg-white hover:border-brand-lightblue/20 transition-all group duration-300"
+                  >
+                    <div className="absolute top-4 right-6 text-4xl font-extrabold text-slate-200 group-hover:text-brand-lightblue/35 transition-colors font-serif">
+                      0{s.num}
+                    </div>
+                    <h3 className="text-lg pt-4 font-bold text-brand-blue font-serif mt-4">
+                      {s.title}
+                    </h3>
+                    <p className="text-sm text-slate-500 mt-3 leading-relaxed">
+                      {s.desc}
+                    </p>
                   </div>
-                  <h3 className="text-lg pt-4 font-bold text-brand-blue font-serif mt-4">
-                    {s.title}
-                  </h3>
-                  <p className="text-sm text-slate-500 mt-3 leading-relaxed">
-                    {s.desc}
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
+
+              {/* Second row: 2 steps, centered */}
+              {/* Second row: 2 steps, centered */}
+              <div className="grid grid-cols-2 gap-6 justify-center max-w-2xl mx-auto">
+                {steps.slice(3).map((s) => (
+                  <div
+                    key={s.num}
+                    className="flex flex-col rounded-2xl border border-slate-100 bg-slate-50 p-6 relative hover:shadow-md hover:bg-white hover:border-brand-lightblue/20 transition-all group duration-300"
+                  >
+                    <div className="absolute top-4 right-6 text-4xl font-extrabold text-slate-200 group-hover:text-brand-lightblue/35 transition-colors font-serif">
+                      0{s.num}
+                    </div>
+                    <h3 className="text-lg pt-4 font-bold text-brand-blue font-serif mt-4">
+                      {s.title}
+                    </h3>
+                    <p className="text-sm text-slate-500 mt-3 leading-relaxed">
+                      {s.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -247,7 +271,7 @@ export default function Home() {
                       </h3>
                       <p className="text-[11px] text-slate-500 mt-0.5">
                         Available for clients in Ottawa and environs at our
-                        physical office spaces. Other physical locations will be
+                        physical office. Other physical locations will be
                         updated.
                       </p>
                     </div>

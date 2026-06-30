@@ -15,7 +15,7 @@ export default function SplashScreen() {
   return (
     <div className={`splash-screen ${fadeOut ? "fade-out" : ""}`}>
       <Image
-        src="/logo.jpg" // replace with your logo path
+        src="/company.png" // replace with your logo path
         alt="Project Logo"
         width={200}
         height={200}

@@ -16,71 +16,75 @@ export default function FAQ() {
       items: [
         {
           q: "What is a financial plan, and why do I need one?",
-          a: "A financial plan is a personalized roadmap for your money. It outlines your current financial situation, your goals, and the steps needed to achieve them — whether it’s saving for retirement, managing debt, or buying a home. A strong plan helps you feel in control and confident about the future.",
+          a: "A financial plan is a personalized roadmap designed to help you achieve your financial goals with confidence. It provides a clear picture of your current financial position, identifies your short- and long-term objectives, and outlines practical strategies to help you reach them. Whether you're planning for your kid’s education, retirement, purchasing a home, managing debt, growing your wealth, or protecting your family's future, a comprehensive financial plan gives you the clarity, direction, and confidence to make informed financial decisions every step of the way.",
         },
         {
           q: "What types of clients do you work with?",
-          a: "We work with individuals, families, business owners, and clients navigating life transitions like divorce, retirement, or career changes. Whether you’re just starting out or have built substantial wealth, we tailor our advice to your specific situation.",
+          a: "We work with individuals, families, professionals, and business owners at every stage of their financial journey. Whether you're building your financial foundation, growing your wealth, preparing for retirement, managing a business, or navigating significant life transitions such as a career change, we provide personalized financial strategies tailored to your unique goals, values, and needs.",
         },
         {
-          q: "Do I need to have a lot of money to work with a Financial Planner?",
-          a: "No — financial planning is for everyone. We believe financial guidance should be accessible, regardless of income or net worth. We’ll meet you where you are and help you grow from there.",
+          q: "Do I need to have a lot of money to work with SelasSecure Financial?",
+          a: "NO! We believe everyone deserves access to quality financial guidance, regardless of their income or net worth. Wherever you are on your financial journey, we meet you where you are, provide personalized advice, and help you build a stronger financial future with confidence.",
         },
         {
           q: "How are you compensated for your services?",
-          a: "We offer a variety of compensation models depending on your needs — including fee-based planning, commission-based solutions, and ongoing advisory services. We'll explain everything clearly before we begin.",
-        },
-        {
-          q: "What’s the difference between a Financial Planner and an Investment Advisor?",
-          a: "A financial planner helps you look at the full picture — budgeting, taxes, retirement, insurance, estate planning and more. An investment advisor typically focuses only on managing your investments. At SelasSecure Financial, we offer both services, integrated into a comprehensive plan.",
+          a: "Our compensation model for our Advisors are commission-based from our partners. We explain everything before we begin as part of regulatory compliance.",
         },
         {
           q: "How often will we meet to review my plan?",
-          a: "We typically review your plan annually, or more often if your circumstances change. We are also available any time for questions or concerns.",
+          a: "Your financial plan is reviewed with you at least annually to ensure it remains aligned with your goals and evolving circumstances. If you experience a significant life event or your financial situation changes, we will revisit your plan sooner. Our team is also available year-round to answer your questions, provide guidance, and support you whenever you need us.",
         },
         {
           q: "Can you work with my accountant or lawyer?",
-          a: "Yes! Collaboration is key. We often work with your existing team of professionals to ensure your financial, tax, and legal strategies are aligned.",
+          a: "YES - Collaboration is at the core of our approach. We work closely with your existing team of professionals to ensure your financial, tax, and legal strategies are fully aligned and working together in your best interest.",
         },
         {
           q: "What if my financial situation changes?",
-          a: "Life happens — and we’re here to help you adapt. Your financial plan is a living document, and we update it as your needs and goals evolve.",
+          a: "Life happens! Your financial plan is a living document that evolves alongside your changing needs, goals, and circumstances, and we update it regularly to keep you on track.",
         },
       ],
     },
     {
-      name: "Working With SelasSecure Financial",
+      name: "Working With SelaSecure Financial",
       items: [
         {
           q: "What’s your process for new clients?",
-          a: "We start with a free discovery meeting to understand your goals. From there, we gather your financial details, peer-review assumptions within our board of advisors, and create a personalized financial plan. If you choose to move forward, we implement and monitor your plan together.",
+          a: "We start with a free discovery meeting to understand your goals. From there, we gather your financial details, and collaborate with you to create a personalized financial plan. If you choose to move forward, we implement and monitor your progress together.",
         },
         {
           q: "Is the first meeting really free?",
-          a: "Yes! There’s no cost or obligation for our initial consultation. It’s a chance for you to ask questions and decide if we are the right fit for you.",
+          a: "Yes! Our initial consultation is free and comes with no obligation. It’s a chance for you to ask questions, explore how we work, and decide whether we’re the right partner to support your financial journey.",
         },
         {
           q: "Do you offer virtual appointments?",
-          a: "Yes. We work with clients across Alberta and BC virtually via Zoom, and in-person across Calgary, Okotoks, Airdrie, and High River.",
+          a: "Yes! We work with clients across Canada and the USA virtually via Zoom, and in-person for clients in Ottawa and environs. Other physical office locations will be updated.",
         },
         {
-          q: "What makes SelasSecure Financial different from other firms?",
-          a: "We combine planning expertise with empathy and a collaborative advisory review. Before your plan is presented, we remove private identifying variables and pressure-test the strategy with our broader team to identify hidden options and tax cuts.",
+          q: "What makes SelaSecure Financial different from other firms?",
+          a: "Our collaborative, client-centered approach to financial planning is what distinguishes us. We take the time to work closely with you, designing strategies rooted in empathy, clarity, and trust—focused on helping you grow your wealth and secure generational wealth for the future.",
         },
         {
           q: "How do I get started?",
           a: (
             <>
-              &quot;Simply book your free introductory call or reach out via our
+              Simply{" "}
+              <Link
+                href="/book-now"
+                className="text-brand-blue font-semibold hover:undeline"
+              >
+                {" "}
+                Book Free Consultation
+              </Link>{" "}
+               or reach out via our
               <Link
                 href="/contact"
                 className="text-brand-blue font-semibold hover:undeline"
               >
                 {" "}
-                contact form
+                Contact Form
               </Link>
               . We would love to help you begin your journey with clarity and
-              confidence.&quot;,
+              confidence.,
             </>
           ),
         },
@@ -201,7 +205,7 @@ export default function FAQ() {
                 className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-blue to-[#0e487d] px-6 py-3 font-bold text-white shadow-md hover:shadow-lg transition-all"
               >
                 <Calendar className="w-4 h-4" />
-                Book a Call
+                Book Free Consultation
               </Link>
               <Link
                 href="/contact"

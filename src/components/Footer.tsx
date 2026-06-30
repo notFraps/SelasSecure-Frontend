@@ -45,8 +45,8 @@ export default function Footer() {
               &quot;Secure. Generational. Wealth.&quot;
             </p>
             <p className="text-xs text-slate-400 leading-relaxed mt-2">
-              Empowering individuals, families, and businesses in Cananda and
-              the US to build Secure and Generational Wealth through collaboration
+              Empowering individuals, families, and businesses in Canada and the
+              USA to build Secure and Generational Wealth through collaboration
               and client-focused strategies.
             </p>
           </div>
@@ -83,10 +83,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/estate-planning"
+                  href="/group-benefits-rrsp"
                   className="hover:text-white transition-colors"
                 >
-                  Estate Planning
+                  Life Insurance Planning
                 </Link>
               </li>
               <li>
@@ -94,15 +94,7 @@ export default function Footer() {
                   href="/group-benefits-rrsp"
                   className="hover:text-white transition-colors"
                 >
-                  RRSP TFSA & FHSA Optimization
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/group-benefits-rrsp"
-                  className="hover:text-white transition-colors"
-                >
-                  Group Benefits
+                  RESP, RRSP, TFSA & FHSA Optimization
                 </Link>
               </li>
               <li>
@@ -118,12 +110,20 @@ export default function Footer() {
                   href="/group-benefits-rrsp"
                   className="hover:text-white transition-colors"
                 >
-                  Life Insurance Planning
+                  Group Benefits
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/insurance"
+                  href="/estate-planning"
+                  className="hover:text-white transition-colors"
+                >
+                  Estate Planning
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/mortgage-referral"
                   className="hover:text-white transition-colors"
                 >
                   Mortgage Referral
@@ -213,6 +213,34 @@ export default function Footer() {
                 Thank you for subscribing!
               </p>
             )}
+          </div>
+        </div>
+        <div className="mt-12 text-center">
+          <h3 className="text-lg font-semibold text-white mb-6">
+            Our Partners
+          </h3>
+          <div className="flex flex-wrap justify-center gap-6">
+            <Image
+              src="/logo.jpg"
+              alt="Partner 1"
+              width={100}
+              height={60}
+              className="object-contain"
+            />
+            {/* <Image
+              src="/partners/partner2.png"
+              alt="Partner 2"
+              width={100}
+              height={60}
+              className="object-contain"
+            />
+            <Image
+              src="/partners/partner3.png"
+              alt="Partner 3"
+              width={100}
+              height={60}
+              className="object-contain"
+            /> */}
           </div>
         </div>
 

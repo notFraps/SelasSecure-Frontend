@@ -26,7 +26,6 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
-  const [otherServiceInput, setOtherServiceInput] = useState("");
   const [isAboutOpen, setIsAboutOpen] = useState(false);
 
   const aboutTimeout = useRef<NodeJS.Timeout | null>(null);
@@ -59,51 +58,51 @@ export default function Header() {
   const services = [
     {
       name: "Personal Financial Planning",
-      href: "/personal-family-financial-planning",
+      href: "/personal-financial-planning",
       desc: "Tailored long-term wealth strategy",
       icon: HeartHandshake,
     },
     {
       name: "Family Financial Planning",
-      href: "/personal-family-financial-planning",
+      href: "/family-financial-planning",
       desc: "Comprehensive family financial solutions",
       icon: ShieldAlert,
     },
     {
       name: "Corporate Financial Planning",
-      href: "/personal-family-financial-planning",
+      href: "/corporate-financial-planning",
       desc: "Strategic financial solutions for businesses",
       icon: Award,
+    },
+    {
+      name: "Life Insurance Planning",
+      href: "/hsa",
+      desc: "Protecting families and liabilities",
+      icon: CalendarHeart,
+    },
+    {
+      name: "RESP, RRSP, TFSA & FHSA Optimization",
+      href: "/group-benefits-rrsp",
+      desc: "Get better investment advice for these accounts",
+      icon: FileSpreadsheet,
+    },
+    {
+      name: "Health Insurance Planning",
+      href: "/insurance",
+      desc: "Supplemental health coverage",
+      icon: FileHeart,
+    },
+    {
+      name: "Group Benefits",
+      href: "/group-benefits-rrsp",
+      desc: "Employee retention strategies for businesses",
+      icon: UsersRound,
     },
     {
       name: "Estate Planning",
       href: "/estate-planning",
       desc: "Minimize taxes and transfer wealth",
       icon: Briefcase,
-    },
-    {
-      name: "RRSP TFSA & FHSA Optimization",
-      href: "/group-benefits-rrsp",
-      desc: "Custom employee retention plans",
-      icon: FileSpreadsheet,
-    },
-    {
-      name: "Group Benefits",
-      href: "/group-benefits-rrsp",
-      desc: "Custom employee retention plans",
-      icon: UsersRound,
-    },
-    {
-      name: "Health Insurance Planning",
-      href: "/health-plans",
-      desc: "Supplemental health coverage",
-      icon: FileHeart,
-    },
-    {
-      name: "Life Insurance Planning",
-      href: "/health-plans",
-      desc: "Protecting families and liabilities",
-      icon: CalendarHeart,
     },
     {
       name: "Mortgage Referral",
@@ -116,12 +115,6 @@ export default function Header() {
       href: "/debt-restructuring",
       desc: "Professional debt management solutions",
       icon: Building,
-    },
-    {
-      name: "USA Services",
-      href: "/usa-services",
-      desc: "Financial services for US clients",
-      icon: EarthIcon
     },
     {
       name: "Other Financial Services",
@@ -139,7 +132,7 @@ export default function Header() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-3">
               <Image
-                src="/logo.jpg"
+                src="/company.png"
                 alt="SelasSecure Financial Logo"
                 width={82}
                 height={52}
@@ -265,7 +258,7 @@ export default function Header() {
               className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-blue to-[#0e487d] px-5 py-2.5 text-sm font-bold text-white shadow-md shadow-brand-blue/10 hover:shadow-lg hover:shadow-brand-blue/20 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
             >
               <Calendar className="w-4 h-4" />
-              Book Now
+              Book Free Consultation
             </Link>
           </div>
 

@@ -10,31 +10,37 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-export default function InsurancePlanning() {
+export default function CorporateFinancialPlanning() {
   const steps = [
     {
       num: "1",
-      title: "Discovery and Education Meeting",
-      desc: "We get to know you, your goals and your current financial situation. This is a no-pressure, confidential conversation to help us understand what matters most to you, and see if we are a good fit. We also explore your needs and educate you on the different insurance options available to you, so that you can make informed decisions.",
+      title: "Discovery Meeting",
+      desc: "We get to know you, your goals and your corporate/business structure, and its current financial situation. This is a no-pressure, confidential conversation to help us understand what matters most to you, and see if we are a good fit.",
       icon: ClipboardCheck,
     },
     {
       num: "2",
-      title: "Data Gathering and Illustrations",
-      desc: "You provide us with relevant personal, health, and financial information so we can build a complete an insurance based on your insurance needs.",
+      title: "Data Gathering",
+      desc: "You provide us with relevant financial documents (such as income details, bank balances, tax details, debts, benefits, and investment statements) and other corporate documents so we can build a complete and accurate picture of your corporation finances.",
       icon: CheckSquare,
     },
     {
       num: "3",
-      title: "Implementation Support",
-      desc: "Once you are satisfied with the details of your insurance strategy that we have developed, we help you make the application. Before the application is made, we ensure all structural adjustments are in place to suit your needs.",
+      title: "Corporate Financial Strategy Development",
+      desc: "At SelasSecure Financial, we believe collaboration is key— this is what sets us apart in Financial Services. We design your Corporate Financial Strategy with active involvement from the decision-makers because you understand your corporate dynamics better. We provide professional guidance, and detailed education so that we can create a strategy that meets your core needs, goals and desires.",
       icon: Users,
     },
     {
       num: "4",
-      title: "Ongoing Support & Reviews",
-      desc: "Life changes, and this affects your insurance needs. We meet with you regularly to review your insurance coverage, update strategies, and ensure you are always adequately insured.",
+      title: "Implementation Support",
+      desc: "Once you are satisfied with your Corporate financial strategy, we help you put the strategy into action at your own pace. This may include setting up new savings/investment accounts, consolidating files, adjusting insurance coverage, or coordinating asset transfers and other corporate structural adjustments.",
       icon: HelpCircle,
+    },
+    {
+      num: "5",
+      title: "Ongoing Support & Reviews",
+      desc: "Corporate life changes, and this affects your company's financial structure. We meet with you regularly to review the company's progress, review tax filings, update strategies, and ensure you stay on the path to financial confidence.",
+      icon: Calendar,
     },
   ];
 
@@ -48,12 +54,13 @@ export default function InsurancePlanning() {
           <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-brand-lightblue/10 blur-3xl" />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10">
             <h1 className="text-3xl font-bold md:text-5xl font-serif">
-              Insurance Planning
+              Corporate Financial Planning
             </h1>
             <p className="text-sm md:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
-              How we work with you to turn complex Insurance decisions
-              into a clear, actionable plan. All stakeholders actively involved
-              in the corporation/business are carried along in this process.
+              How we work with you to turn complex Corporate Financial
+              decisions into a clear, actionable plan. All stakeholders
+              actively involved in the corporation/business are
+              carried along in this process.
             </p>
           </div>
         </section>
@@ -63,7 +70,7 @@ export default function InsurancePlanning() {
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <div className="text-center space-y-3 mb-16">
               <h2 className="text-2xl md:text-3xl font-bold font-serif text-brand-blue">
-                Our 4-Step Collaborative Roadmap
+                Our 5-Step Collaborative Roadmap
               </h2>
               <p className="text-sm text-slate-500 max-w-xl mx-auto">
                 How we work together to turn complex decisions into a clear,
@@ -111,7 +118,8 @@ export default function InsurancePlanning() {
             </h2>
             <p className="text-slate-600 text-sm leading-relaxed max-w-xl mx-auto">
               Our initial discovery consultation is free, confidential, and
-              carries no obligation. Let&apos;s discuss how we can securely insure you from risks beyond your control.
+              carries no obligation. Let's discuss how we can securely build
+              generatoinal wealth for your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-2">
               <Link

@@ -55,7 +55,7 @@ export default function EstatePlanning() {
                   Protecting What Matters
                 </h3>
                 <p className="text-xs text-slate-500 leading-normal mt-2">
-                  Estate planning is about more than money—it is about providing peace of mind to your loved ones and ensuring your life's work is preserved for future generations.
+                  Estate planning is about more than money—it is about providing peace of mind to your loved ones and ensuring your life's work is secured for future generations.
                 </p>
               </div>
             </div>

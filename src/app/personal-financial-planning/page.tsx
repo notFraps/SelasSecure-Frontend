@@ -1,14 +1,22 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { HeartHandshake, Phone, ArrowRight, ClipboardCheck, Users, HelpCircle, CheckSquare, Calendar, ChevronRight } from "lucide-react";
+import {
+  HeartHandshake,
+  ClipboardCheck,
+  Users,
+  HelpCircle,
+  CheckSquare,
+  Calendar,
+  ChevronRight,
+} from "lucide-react";
 
 export default function PersonalFamilyPlanning() {
   const steps = [
     {
       num: "1",
       title: "Discovery Meeting",
-      desc: "We get to know you, your current financial situation, and your aspirations. This is a no-pressure, confidential conversation to help us understand what matters most to you, and see if we are a good fit.",
+      desc: "We get to know you, your goals and your current financial situation. This is a no-pressure, confidential conversation to help us understand what matters most to you, and see if we are a good fit.",
       icon: ClipboardCheck,
     },
     {
@@ -19,44 +27,39 @@ export default function PersonalFamilyPlanning() {
     },
     {
       num: "3",
-      title: "Collaboration & Peer Review",
-      desc: "At SelasSecure Financial, we believe collaboration is key—this is what sets us apart. When we design your plan, you get not only our lead advisor's expertise, but also the collective insights of our advisory board. By removing all private identifying information, we share your case layout with our advisors to pressure-test assumptions, look for hidden tax efficiencies, and identify risks you may not have considered.",
+      title: "Personal Financial Strategy Development",
+      desc: "At SelasSecure Financial, we believe collaboration is key—this is what sets us apart in Financial Services. We design your Persoanl Financial Strategy with your active involvement because you understand your goals better. We provide professional guidiannce, and detailed education so that we can create a strategy that meets your core needs, goals and desires.",
       icon: Users,
     },
     {
       num: "4",
-      title: "Plan Consultation",
-      desc: "We sit down and walk through your custom plan together, explaining all recommendations in plain, understandable language. We answer every question and explain the options so you can decide how you would like to proceed.",
+      title: "Implementation Support",
+      desc: "Once you are satisfied with your Personal financial strategy, we help you put the strategy into action at your own pace. This may include setting up new savings/investment accounts, consolidating files, adjusting insurance coverage, or coordinating asset transfers.",
       icon: HelpCircle,
     },
     {
       num: "5",
-      title: "Implementation Support",
-      desc: "Once you approve the path, we help you put the plan into action at your own pace. This may include setting up new savings/investment accounts, consolidating files, adjusting insurance coverage, or coordinating asset transfers.",
-      icon: Calendar,
-    },
-    {
-      num: "6",
       title: "Ongoing Support & Reviews",
-      desc: "Life changes, and your plan should too. We meet regularly to review your progress, review tax filings, update goals, and adjust strategies to ensure you stay on the path to financial confidence.",
-      icon: HeartHandshake,
+      desc: "Life changes, and your goals should too. We meet with you regularly to review your progress, review tax finilings, update strategies, and ensure you stay on the path to financial confidence.",
+      icon: Calendar,
     },
   ];
 
   return (
     <>
       <Header />
-      
+
       <main className="flex-grow bg-slate-50/50">
         {/* Page Header */}
         <section className="bg-brand-blue text-white py-16 md:py-20 relative overflow-hidden">
           <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-brand-lightblue/10 blur-3xl" />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10">
             <h1 className="text-3xl font-bold md:text-5xl font-serif">
-              Personal & Family Financial Planning
+              Personal Financial Planning
             </h1>
             <p className="text-sm md:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
-              We believe financial planning should be empowering—not overwhelming. We build custom roadmaps that simplify your options and secure your family's future.
+              How we work with you to turn personal complex financial decicions
+              into clear, actionable plans that help you achieve your goals.
             </p>
           </div>
         </section>
@@ -66,10 +69,11 @@ export default function PersonalFamilyPlanning() {
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <div className="text-center space-y-3 mb-16">
               <h2 className="text-2xl md:text-3xl font-bold font-serif text-brand-blue">
-                Our 6-Step Collaborative Roadmap
+                Our 5-Step Collaborative Roadmap
               </h2>
               <p className="text-sm text-slate-500 max-w-xl mx-auto">
-                How we work together to turn complex decisions into a clear, actionable plan.
+                How we work together to turn complex decisions into a clear,
+                actionable plan.
               </p>
             </div>
 
@@ -112,7 +116,9 @@ export default function PersonalFamilyPlanning() {
               Ready to Plan With Confidence?
             </h2>
             <p className="text-slate-600 text-sm leading-relaxed max-w-xl mx-auto">
-              Our initial discovery consultation is free, confidential, and carries no obligation. Let's discuss how we can secure your family's future.
+              Our initial discovery consultation is free, confidential, and
+              carries no obligation. Let's discuss how we can securely build
+              generatoinal wealth for you.
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-2">
               <Link

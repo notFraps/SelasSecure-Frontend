@@ -27,7 +27,6 @@ export default function AboutUs() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               {/* Advisor 1: Trisha */}
-              
 
               {/* Advisor 2: Robin */}
               <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-slate-100 space-y-6">
@@ -43,10 +42,10 @@ export default function AboutUs() {
                       Licensed Financial Advisor
                     </p>
                     <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-xs text-slate-500 pt-2">
-                      <span className="flex items-center justify-center sm:justify-start gap-1">
+                      {/* <span className="flex items-center justify-center sm:justify-start gap-1">
                         <Phone className="w-3.5 h-3.5" />
                         +1 613 899 3398
-                      </span>
+                      </span> */}
                       <span className="flex items-center justify-center sm:justify-start gap-1">
                         <Mail className="w-3.5 h-3.5" />
                         eja@selasecurefinancial.com
@@ -57,24 +56,29 @@ export default function AboutUs() {
 
                 <div className="space-y-4 text-slate-600 text-sm leading-relaxed">
                   <p>
-                    Esla has been working in the financial industry since 2008.
-                    He is an experienced Financial Advisor, having previously
-                    worked at TD Bank and as an Account Manager at the Business
-                    Development Bank of Canada.
+                    Esla has been an active player in the financial industry in
+                    North America for over a decade. He taught himself how to
+                    invest in the US Stock market while in Nigeria, his home
+                    country.
                   </p>
                   <p>
-                    He holds professional expertise in residential and
-                    commercial real estate, granting him deep knowledge of both
-                    liquid (investments) and non-liquid (real estate assets)
-                    wealth management. Esla approaches client relationships with
-                    a sense of purpose and a humble heart.
+                    After his immigration into Canada, he decided to formally
+                    become a Financial Educator and Advisor who provides
+                    guidance to individuals, families, and businesses. Helping
+                    them make better financial decisions that will have an
+                    impact today and for generations to come.
                   </p>
                   <p>
-                    Esla considers his role similar to a &quot;Financial Family
-                    Doctor,&quot; acting as a trusted companion throughout his
-                    clients&apos; financial journey. He is dedicated to helping
-                    families build generational wealth and sharing in their
-                    milestone achievements.
+                    Esla approaches client relationships with a sense of
+                    purpose, a humble heart, and dignity. He is dedicated to
+                    helping families build secure generational wealth and
+                    sharing in their milestone achievements. Esla acts as a
+                    trusted companion throughout his clients' financial journey.
+                  </p>
+                  <p>
+                    Esla considers his role similar to a "Financial Family
+                    Doctor," as he was a Family Doctor in Nigeria for more than
+                    5 years, before his immigration into Canada
                   </p>
                 </div>
 

@@ -23,7 +23,7 @@ export default function FAQ() {
         {/* CTA */}
         <section className="py-20 border-t border-slate-100 text-center">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 space-y-6">
-            <h2 className="text-2xl shadow-md rounded-lg leading-loose md:text-3xl font-bold font-serif text-brand-blue">
+            <h2 className="text-2xl font-style: italic shadow-md rounded-lg leading-loose md:text-3xl font-bold font-serif text-brand-blue">
               To redefine financial planning by delivering bespoke strategies
               that inspire confidence, create prosperity, and leave a lasting
               legacy for future generations.
