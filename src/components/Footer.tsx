@@ -215,19 +215,19 @@ export default function Footer() {
             )}
           </div>
         </div>
-        <div className="mt-12 text-center">
+        {/* <div className="mt-12 text-center">
           <h3 className="text-lg font-semibold text-white mb-6">
             Our Partners
           </h3>
           <div className="flex flex-wrap justify-center gap-6">
-            <Image
+            { <Image
               src="/company.png"
               alt="Partner 1"
               width={100}
               height={60}
               className="object-contain"
-            />
-            {/* <Image
+            /> }
+            { <Image
               src="/partners/partner2.png"
               alt="Partner 2"
               width={100}
@@ -240,9 +240,9 @@ export default function Footer() {
               width={100}
               height={60}
               className="object-contain"
-            /> */}
+            /> }
           </div>
-        </div>
+        </div> */}
 
         {/* Footer Bottom Bar */}
         <div className="mt-16 border-t border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
