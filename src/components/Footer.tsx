@@ -221,7 +221,7 @@ export default function Footer() {
           </h3>
           <div className="flex flex-wrap justify-center gap-6">
             <Image
-              src="/logo.jpg"
+              src="/company.png"
               alt="Partner 1"
               width={100}
               height={60}
