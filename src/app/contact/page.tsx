@@ -53,8 +53,8 @@ export default function Contact() {
                       </p>
                       <p className="text-xs text-slate-500 leading-normal">
                         Centerpointe Financial Centre, <br />
-                        84 Centerpointe Drive <br />
-                        Ottawa, ON, K2G 6B1
+                        84 Centerpointe Drive, <br />
+                        Ottawa, ON, K2G 6B1.
                       </p>
                     </div>
                   </div>

@@ -220,32 +220,86 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-white mb-6">
               Our Partners
             </h3>
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-wrap justify-center gap-10">
               {
                 <Image
-                  src="/company.png"
+                  src="/aon.jpeg"
                   alt="Partner 1"
-                  width={100}
+                  width={120}
                   height={60}
-                  className="object-contain"
+                  className="object-contain rounded-[2.5rem]"
                 />
               }
               {
                 <Image
-                  src="/company.png"
+                  src="/bmo.jpg"
                   alt="Partner 1"
-                  width={100}
+                  width={120}
                   height={60}
-                  className="object-contain"
+                  className="object-contain rounded-[2.5rem]"
                 />
               }
               {
                 <Image
-                  src="/company.png"
+                  src="/elephant.jpg"
                   alt="Partner 1"
-                  width={100}
+                  width={120}
                   height={60}
-                  className="object-contain"
+                  className="object-contain rounded-[2.5rem]"
+                />
+              }
+              {
+                <Image
+                  src="/empirelife.jpg"
+                  alt="Partner 1"
+                  width={120}
+                  height={60}
+                  className="object-contain rounded-[2.5rem]"
+                />
+              }
+              {
+                <Image
+                  src="/equitable.jpg"
+                  alt="Partner 1"
+                  width={120}
+                  height={60}
+                  className="object-contain rounded-[2.5rem]"
+                />
+              }
+              {
+                <Image
+                  src="/everest.jpg"
+                  alt="Partner 1"
+                  width={120}
+                  height={60}
+                  className="object-contain rounded-[2.5rem]"
+                />
+              }
+              {
+                <Image
+                  src="/fourp.jpeg"
+                  alt="Partner 1"
+                  width={120}
+                  height={60}
+                  className="object-contain rounded-[2.5rem]"
+                />
+              }
+              {
+                <Image
+                  src="/ivari.jpg"
+                  alt="Partner 1"
+                  width={120}
+                  height={60}
+                  className="object-contain rounded-[2.5rem]"
+                />
+              }
+              {
+                <Image
+                  src="/twopart.jpg"
+                  alt="Partner 1"
+                  width={150}
+                  height={60}
+                  className="object-contain rounded-[2.5rem]"
                 />
               }
             </div>

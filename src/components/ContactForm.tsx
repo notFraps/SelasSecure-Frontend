@@ -201,20 +201,6 @@ export default function ContactForm() {
         </div>
       )}
 
-      {/* Checkbox CAPTCHA */}
-      <div className="flex items-center gap-2">
-        <input
-          type="checkbox"
-          id="captcha"
-          checked={captchaChecked}
-          onChange={(e) => setCaptchaChecked(e.target.checked)}
-          className="h-4 w-4 rounded border-slate-300 text-brand-blue focus:ring-brand-lightblue"
-        />
-        <label htmlFor="captcha" className="text-sm text-slate-700">
-          I am not a robot
-        </label>
-      </div>
-
       <button
         type="submit"
         disabled={status === "submitting"}
