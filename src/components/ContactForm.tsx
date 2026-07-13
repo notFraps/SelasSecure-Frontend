@@ -15,7 +15,7 @@ export default function ContactForm() {
   const [status, setStatus] = useState<
     "idle" | "submitting" | "success" | "error"
   >("idle");
-  const [captchaChecked, setCaptchaChecked] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const services = [
     "Personal Financial Planning",
@@ -43,16 +43,39 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!captchaChecked) {
-      alert("Please confirm you are not a robot.");
+    // Basic client-side validation
+    if (!formData.name.trim() || !formData.email.trim()) {
+      alert("Please provide your name and email.");
       return;
     }
 
     setStatus("submitting");
+    setErrorMessage(null);
 
     try {
-      // Simulate server side submission
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const res = await fetch("/api/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.message,
+          source: "contact-page",
+        }),
+      });
+
+      if (!res.ok) {
+        const payload = await res.json().catch(() => ({}));
+        const msg =
+          payload?.error || `Request failed with status ${res.status}`;
+        setErrorMessage(msg);
+        setStatus("error");
+        return;
+      }
+
+      // success
       setStatus("success");
       setFormData({
         name: "",
@@ -61,8 +84,9 @@ export default function ContactForm() {
         service: "General Financial Planning",
         message: "",
       });
-      setCaptchaChecked(false);
-    } catch {
+    } catch (err) {
+      console.error("Submit error:", err);
+      setErrorMessage("Network error. Please try again.");
       setStatus("error");
     }
   };
@@ -144,7 +168,6 @@ export default function ContactForm() {
             type="tel"
             id="phone"
             name="phone"
-            required
             placeholder="(123) 456-7890"
             value={formData.phone}
             onChange={handleChange}
@@ -197,7 +220,7 @@ export default function ContactForm() {
       {status === "error" && (
         <div className="flex items-center gap-2 rounded-xl bg-red-50 p-3.5 text-xs font-medium text-red-700 border border-red-100">
           <AlertCircle className="w-4 h-4 shrink-0" />
-          An error occurred. Please try again.
+          {errorMessage || "An error occurred. Please try again."}
         </div>
       )}
 

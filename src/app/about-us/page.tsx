@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { User, Phone, Mail, MapPin, Laptop, Award, Shield } from "lucide-react";
+import Image from "next/image";
 
 export default function AboutUs() {
   return (
@@ -32,14 +33,20 @@ export default function AboutUs() {
               <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-slate-100 space-y-6">
                 <div className="flex flex-col sm:flex-row items-center gap-6 pb-6 border-b border-slate-100">
                   <div className="h-24 w-24 rounded-full bg-brand-green flex items-center justify-center text-white text-3xl font-bold font-serif shadow-inner shrink-0">
-                    EA
+                    <Image
+                      src="/EA.jpeg"
+                      alt="Esla Allanana"
+                      width={96}
+                      height={96}
+                      className="rounded-full object-cover"
+                    />
                   </div>
                   <div className="text-center sm:text-left space-y-1">
                     <h2 className="text-2xl font-bold text-brand-blue font-serif">
                       Esla Allanana
                     </h2>
                     <p className="text-xs font-bold uppercase tracking-wider text-brand-lightblue">
-                      Licensed Financial Advisor
+                      Financial Consultant
                     </p>
                     <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-xs text-slate-500 pt-2">
                       {/* <span className="flex items-center justify-center sm:justify-start gap-1">
@@ -79,6 +86,87 @@ export default function AboutUs() {
                     Esla considers his role similar to a "Financial Family
                     Doctor," as he was a Family Doctor in Nigeria for more than
                     5 years, before his immigration into Canada
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap gap-2.5 pt-2">
+                  <span className="inline-flex items-center gap-1 text-xs font-bold rounded-lg bg-brand-muted text-brand-blue px-3 py-1.5 border border-brand-lightblue/10">
+                    <Award className="w-3.5 h-3.5" />
+                    Wealth Strategist
+                  </span>
+                  <span className="inline-flex items-center gap-1 text-xs font-bold rounded-lg bg-brand-muted text-brand-blue px-3 py-1.5 border border-brand-lightblue/10">
+                    <Shield className="w-3.5 h-3.5" />
+                    Life Insurance Advisor
+                  </span>
+                </div>
+              </div>
+              <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-slate-100 space-y-6">
+                <div className="flex flex-col sm:flex-row items-center gap-6 pb-6 border-b border-slate-100">
+                  <div className="h-24 w-24 rounded-full bg-brand-green flex items-center justify-center text-white text-3xl font-bold font-serif shadow-inner shrink-0">
+                    <Image
+                      src="/aud.png"
+                      alt="Esla Allanana"
+                      width={96}
+                      height={96}
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                  <div className="text-center sm:text-left space-y-1">
+                    <h2 className="text-2xl font-bold text-brand-blue font-serif">
+                      Audrey Matcheu
+                    </h2>
+                    <p className="text-xs font-bold uppercase tracking-wider text-brand-lightblue">
+                      Licensed Financial Advisor
+                    </p>
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-xs text-slate-500 pt-2">
+                      {/* <span className="flex items-center justify-center sm:justify-start gap-1">
+                        <Phone className="w-3.5 h-3.5" />
+                        +1 613 899 3398
+                      </span> */}
+                      <span className="flex items-center justify-center sm:justify-start gap-1">
+                        <Mail className="w-3.5 h-3.5" />
+                        audrey@selasecurefinancial.com
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-4 text-slate-600 text-sm leading-relaxed">
+                  <p>
+                    Audrey Matcheu is a licensed Financial Advisor and Financial
+                    Educator based in Canada who is passionate about helping
+                    individuals and families build strong financial foundations.
+                    Originally from Cameroon, Audrey understands the challenges
+                    many newcomers and young families face when navigating
+                    Canada’s financial system. Her own journey inspired her to
+                    dedicate her career to making financial education simple,
+                    practical, and accessible.
+                  </p>
+                  <p>
+                    Audrey believes that financial planning is not just about
+                    investing money—it’s about creating opportunities,
+                    protecting what matters most, and building lasting wealth
+                    for future generations. She works closely with individuals,
+                    families, and business owners to help them understand
+                    concepts such as savings, investments, insurance, and
+                    retirement planning, empowering them to make informed
+                    financial decisions with confidence.
+                  </p>
+                  <p>
+                    She approaches every client relationship with integrity,
+                    compassion, and a genuine desire to serve. Audrey sees
+                    herself as a long-term financial partner, guiding clients
+                    through every stage of their financial journey—from
+                    protecting their income and growing their wealth to planning
+                    for their family’s future.
+                  </p>
+                  <p>
+                    Beyond her work as a financial advisor, Audrey is passionate
+                    about financial literacy. Through social media and
+                    educational content, she is committed to helping Canadians,
+                    especially newcomers and young families, understand money in
+                    simple language and make financial decisions that can
+                    positively impact their lives for generations to come.
                   </p>
                 </div>
 

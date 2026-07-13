@@ -120,6 +120,34 @@ h6 {
   opacity: 1;
   transform: translateY(0); /* slide into place */
 }
+/* Google Translate container */
+#google_translate_element {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Style the injected select control */
+.goog-te-combo {
+  background: #ffffff;
+  color: #0b3b66; /* brand-blue */
+  border-radius: 6px;
+  padding: 6px 8px;
+  border: 1px solid rgba(11,59,102,0.12);
+  font-size: 0.875rem;
+  line-height: 1;
+  appearance: none;
+}
+
+/* Remove Google logo/link if injected */
+.goog-logo-link { display: none !important; }
+.goog-te-gadget .goog-te-combo { margin-left: 0 !important; }
+
+/* Keep the container inline and aligned with your header buttons */
+#google_translate_element .goog-te-gadget {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 
 
 @keyframes fadeIn {

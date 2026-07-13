@@ -1,7 +1,17 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { Award, Heart, ShieldAlert, Award as DentalIcon, Percent, Clock, Briefcase, Calendar, ChevronRight } from "lucide-react";
+import {
+  Award,
+  Heart,
+  ShieldAlert,
+  Award as DentalIcon,
+  Percent,
+  Clock,
+  Briefcase,
+  Calendar,
+  ChevronRight,
+} from "lucide-react";
 
 export default function GroupBenefitsRrsp() {
   const benefits = [
@@ -49,7 +59,7 @@ export default function GroupBenefitsRrsp() {
   return (
     <>
       <Header />
-      
+
       <main className="flex-grow bg-slate-50/50">
         {/* Page Header */}
         <section className="bg-brand-blue text-white py-16 md:py-20 relative overflow-hidden">
@@ -59,7 +69,9 @@ export default function GroupBenefitsRrsp() {
               Group Benefits & RRSP
             </h1>
             <p className="text-sm md:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
-              Attract and retain top talent while supporting the well-being of your employees. We build customized group insurance and retirement matching solutions that fit your budget.
+              Attract and retain top talent while supporting the well-being of
+              your employees. We build customized group insurance and retirement
+              matching solutions that fit your budget.
             </p>
           </div>
         </section>
@@ -68,11 +80,13 @@ export default function GroupBenefitsRrsp() {
         <section className="py-20 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center space-y-4 max-w-3xl mx-auto mb-16">
-              <h2 className="text-2xl md:text-3xl font-bold font-serif text-brand-blue">
+              {/* <h2 className="text-2xl md:text-3xl font-bold font-serif text-brand-blue">
                 What are Group Benefits?
-              </h2>
+              </h2> */}
               <p className="text-slate-655 text-sm leading-relaxed">
-                Group benefits are employer-sponsored plans designed to support your employees' health, well-being, and financial security—while helping your business stand out in a competitive job market.
+                Group benefits are employer-sponsored plans designed to support
+                your employees' health, well-being, and financial security—while
+                helping your business stand out in a competitive job market.
               </p>
             </div>
 
@@ -110,7 +124,10 @@ export default function GroupBenefitsRrsp() {
                 What is a Group RRSP?
               </h2>
               <p className="text-slate-655 text-sm leading-relaxed">
-                Many employers include retirement savings options like a Group Registered Retirement Savings Plan (RRSP), which makes it easier for employees to save directly through automated payroll deductions.
+                Many employers include retirement savings options like a Group
+                Registered Retirement Savings Plan (RRSP), which makes it easier
+                for employees to save directly through automated payroll
+                deductions.
               </p>
             </div>
 
@@ -139,7 +156,9 @@ export default function GroupBenefitsRrsp() {
               Build a Healthier Workplace
             </h2>
             <p className="text-slate-600 text-sm leading-relaxed max-w-xl mx-auto">
-              We design customized benefits packages based on company size, employee feedback, and budget parameters. Let's discuss your options.
+              We design customized benefits packages based on company size,
+              employee feedback, and budget parameters. Let's discuss your
+              options.
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-2">
               <Link
@@ -147,7 +166,7 @@ export default function GroupBenefitsRrsp() {
                 className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-blue to-[#0e487d] px-6 py-3 font-bold text-white shadow-md hover:shadow-lg transition-all"
               >
                 <Calendar className="w-4 h-4" />
-                Schedule Benefits Consult
+                Schedule Benefits Consultation
               </Link>
               <Link
                 href="/contact"

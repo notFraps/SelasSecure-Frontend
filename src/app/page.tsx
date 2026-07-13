@@ -60,7 +60,7 @@ export default function Home() {
               <div className="space-y-6 lg:col-span-6">
                 <div className="inline-flex items-center gap-2 rounded-full bg-brand-muted px-4 py-1.5 text-sm font-semibold text-brand-blue border border-brand-lightblue/20">
                   <Shield className="w-4 h-4 text-brand-green" />
-                  Your Trusted Financial Partners
+                  Your Trusted Financial Professionals
                 </div>
                 <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl font-serif text-brand-blue leading-[1.1]">
                   Financial Planning <br />
@@ -101,7 +101,7 @@ export default function Home() {
                       <Image
                         src="/company.png"
                         alt="Logo"
-                        width={350}
+                        width={300}
                         height={200}
                         className=" bg-white border border-white"
                       />
@@ -284,6 +284,114 @@ export default function Home() {
                 <ContactForm />
               </div>
             </div>
+            {
+              <div className="mt-22  pt-10 text-center">
+                <h1 className="text-lg font-semibold text-white mb-6">
+                  Our Partners
+                </h1>
+                <div className="flex flex-wrap justify-center gap-10">
+                  {
+                    <Image
+                      src="/ivari.jpg"
+                      alt="Partner 1"
+                      width={120}
+                      height={60}
+                      className="object-contain rounded-[2.5rem]"
+                    />
+                  }
+                  {
+                    <Image
+                      src="/elephant.jpg"
+                      alt="Partner 1"
+                      width={120}
+                      height={60}
+                      className="object-contain rounded-[2.5rem]"
+                    />
+                  }
+                  {
+                    <Image
+                      src="/equitable.jpg"
+                      alt="Partner 1"
+                      width={120}
+                      height={60}
+                      className="object-contain rounded-[2.5rem]"
+                    />
+                  }
+                  {
+                    <Image
+                      src="/empirelife.jpg"
+                      alt="Partner 1"
+                      width={120}
+                      height={60}
+                      className="object-contain rounded-[2.5rem]"
+                    />
+                  }
+                  {
+                    <Image
+                      src="/twopart.jpg"
+                      alt="Partner 1"
+                      width={150}
+                      height={60}
+                      className="object-contain mt-6"
+                    />
+                  }
+                  {
+                    <Image
+                      src="/bmo.jpg"
+                      alt="Partner 1"
+                      width={150}
+                      height={60}
+                      className="object-contain mt-5 rounded-[2.5rem]"
+                    />
+                  }
+                  {
+                    <Image
+                      src="/aon.svg.png"
+                      alt="Partner 1"
+                      width={100}
+                      height={60}
+                      className="object-contain rounded-[2.5rem]"
+                    />
+                  }
+                  {
+                    <Image
+                      src="/everest.jpg"
+                      alt="Partner 1"
+                      width={120}
+                      height={60}
+                      className="object-contain rounded-[2.5rem]"
+                    />
+                  }
+                  {
+                    <Image
+                      src="/fourp.jpeg"
+                      alt="Partner 1"
+                      width={120}
+                      height={60}
+                      className="object-contain rounded-[2.5rem]"
+                    />
+                  }
+                  {
+                    <Image
+                      src="/wfg.png"
+                      alt="Partner 1"
+                      width={90}
+                      height={60}
+                      className="object-contain rounded-[2.5rem]"
+                    />
+                  }
+                  {
+                    <Image
+                      src="/worldsb.png"
+                      alt="Partner 1"
+                      width={120}
+                      height={60}
+                      className="object-contain rounded-[2.5rem]"
+                    />
+                  }
+                </div>
+              </div>
+            }
           </div>
         </section>
       </main>

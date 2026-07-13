@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -17,7 +17,6 @@ import {
   UsersRound,
   CalendarHeart,
   FileHeart,
-  EarthIcon,
   HandCoins,
   Building
 } from "lucide-react";
@@ -30,6 +29,46 @@ export default function Header() {
 
   const aboutTimeout = useRef<NodeJS.Timeout | null>(null);
   const servicesTimeout = useRef<NodeJS.Timeout | null>(null);
+  
+  useEffect(() => {
+    let tries = 0;
+    const maxTries = 12;
+    const delay = 300;
+
+    function tryInit() {
+      // @ts-ignore
+      const g = (window as any).google;
+      if (
+        g &&
+        g.translate &&
+        typeof g.translate.TranslateElement === "function"
+      ) {
+        try {
+          // @ts-ignore
+          new g.translate.TranslateElement(
+            {
+              pageLanguage: "en",
+              includedLanguages: "fr,es,de",
+              layout: g.translate.TranslateElement.InlineLayout.SIMPLE,
+            },
+            "google_translate_element",
+          );
+        } catch (err) {
+          console.warn("Google Translate init error:", err);
+        }
+        return;
+      }
+
+      tries += 1;
+      if (tries <= maxTries) {
+        setTimeout(tryInit, delay);
+      } else {
+        console.warn("Google Translate did not load after retries.");
+      }
+    }
+
+    tryInit();
+  }, []);
 
   const handleAboutMouseEnter = () => {
     if (aboutTimeout.current) {
@@ -76,7 +115,7 @@ export default function Header() {
     },
     {
       name: "Life Insurance Planning",
-      href: "/hsa",
+      href: "/insurance",
       desc: "Protecting families and liabilities",
       icon: CalendarHeart,
     },
@@ -88,7 +127,7 @@ export default function Header() {
     },
     {
       name: "Health Insurance Planning",
-      href: "/insurance",
+      href: "/hsa",
       desc: "Supplemental health coverage",
       icon: FileHeart,
     },
@@ -252,7 +291,7 @@ export default function Header() {
           </nav>
 
           {/* Action Button - Desktop */}
-          <div className="hidden md:flex items-center">
+          <div className="flex items-center gap-4">
             <Link
               href="/book-now"
               className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-blue to-[#0e487d] px-5 py-2.5 text-sm font-bold text-white shadow-md shadow-brand-blue/10 hover:shadow-lg hover:shadow-brand-blue/20 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
@@ -260,6 +299,7 @@ export default function Header() {
               <Calendar className="w-4 h-4" />
               Book Free Consultation
             </Link>
+            {/* <div id="google_translate_element" className="text-sm"></div> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -344,6 +384,29 @@ export default function Header() {
                 <Calendar className="w-5 h-5" />
                 Book Now
               </Link>
+              {/* npm install firebase
+
+              // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDYF42CW57JmX_ga5lYkO7gtVVFZmu0xDQ",
+  authDomain: "selafinancial-babf3.firebaseapp.com",
+  projectId: "selafinancial-babf3",
+  storageBucket: "selafinancial-babf3.firebasestorage.app",
+  messagingSenderId: "390356787455",
+  appId: "1:390356787455:web:ea298a9cf984d8a3266cca",
+  measurementId: "G-TF7QXFHJCP"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app); */}
             </div>
           </div>
         </div>
