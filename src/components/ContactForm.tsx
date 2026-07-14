@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { Send, CheckCircle, AlertCircle } from "lucide-react";
+import { db } from "@/lib/firebaseClient";
+import { addDoc, collection, doc, setDoc } from "firebase/firestore";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -53,29 +55,30 @@ export default function ContactForm() {
     setErrorMessage(null);
 
     try {
-      const res = await fetch("/api/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          service: formData.service,
-          message: formData.message,
-          source: "contact-page",
-        }),
+      // const res = await fetch("/api/submit", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({
+      //     name: formData.name,
+      //     email: formData.email,
+      //     phone: formData.phone,
+      //     service: formData.service,
+      //     message: formData.message,
+      //     source: "contact-page",
+      //   }),
+      // });
+      const docRef = await addDoc(collection(db, "contactMessages"), {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        message: formData.message,
+        source: "contact-page",
+        timestamp: new Date(),
       });
 
-      if (!res.ok) {
-        const payload = await res.json().catch(() => ({}));
-        const msg =
-          payload?.error || `Request failed with status ${res.status}`;
-        setErrorMessage(msg);
-        setStatus("error");
-        return;
-      }
+      console.log("Document written with ID: ", docRef.id);
 
-      // success
       setStatus("success");
       setFormData({
         name: "",

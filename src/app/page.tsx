@@ -103,7 +103,7 @@ export default function Home() {
                         alt="Logo"
                         width={300}
                         height={200}
-                        className=" bg-white border border-white"
+                        className=" bg-white rounded-[2.5rem] w-36 md:w-48 lg:w-64 h-auto border-white"
                       />
                     </div>
                   </div>

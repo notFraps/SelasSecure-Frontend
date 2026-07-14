@@ -4,20 +4,39 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin, Send, Laptop } from "lucide-react";
+import { db } from "@/lib/firebaseClient";
+import { addDoc, collection } from "firebase/firestore";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email.trim()) {
+    const trimmedEmail = email.trim();
+    if (!trimmedEmail || submitting) return;
+
+    setSubmitting(true);
+    setError("");
+
+    try {
+      await addDoc(collection(db, "subscribers"), {
+        email: trimmedEmail,
+        createdAt: new Date(),
+      });
+
       setSubscribed(true);
       setEmail("");
       setTimeout(() => setSubscribed(false), 5000);
+    } catch (err) {
+      console.error("Subscribe error:", err);
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
     }
   };
-
   return (
     <footer className="w-full bg-[#031121] text-slate-300 border-t border-slate-800">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
@@ -199,11 +218,13 @@ export default function Footer() {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full rounded-xl bg-slate-900 border border-slate-700 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-brand-lightblue focus:ring-1 focus:ring-brand-lightblue focus:outline-none transition-colors"
+                disabled={submitting}
+                className="w-full rounded-xl bg-slate-900 border border-slate-700 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-brand-lightblue focus:ring-1 focus:ring-brand-lightblue focus:outline-none transition-colors disabled:opacity-60"
               />
               <button
                 type="submit"
-                className="absolute right-1.5 top-1.5 flex h-9 w-9 items-center justify-center rounded-lg bg-brand-green hover:bg-[#568432] text-white shadow-sm transition-colors"
+                disabled={submitting}
+                className="absolute right-1.5 top-1.5 flex h-9 w-9 items-center justify-center rounded-lg bg-brand-green hover:bg-[#568432] text-white shadow-sm transition-colors disabled:opacity-60"
               >
                 <Send className="w-4 h-4" />
               </button>
@@ -213,9 +234,11 @@ export default function Footer() {
                 Thank you for subscribing!
               </p>
             )}
+            {error && (
+              <p className="text-xs font-semibold text-red-400">{error}</p>
+            )}
           </div>
         </div>
-        
 
         {/* Footer Bottom Bar */}
         <div className="mt-16 border-t border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
