@@ -93,7 +93,7 @@ export default function Home() {
 
               {/* Hero Right Graphic */}
               <div className="lg:col-span-6 flex justify-center">
-                <div className="relative w-full max-w-xl aspect-square rounded-[2.5rem] bg-gradient-to-tr from-brand-blue to-brand-lightblue p-6 shadow-2xl shadow-brand-blue/20 flex flex-col overflow-hidden">
+                <div className="relative w-full max-w-lg aspect-square rounded-[2.5rem] bg-gradient-to-tr from-brand-blue to-brand-lightblue p-6 shadow-2xl shadow-brand-blue/20 flex flex-col overflow-hidden">
                   {/* Decorative curved shape resembling the logo ground line */}
 
                   <div className="z-5 flex items-center bg-white rounded-[2.5rem] justify-center">
@@ -109,10 +109,10 @@ export default function Home() {
                   </div>
 
                   <div className="z-10 text-white py-4 space-y-3">
-                    <p className="text-2xl font-semibold tracking-wider uppercase text-brand-green">
+                    <p className="text-2xl lg:pt-4 font-semibold tracking-wider uppercase text-brand-green">
                       Our Core Mandate
                     </p>
-                    <p className="text-lg py-2 text-white/80 leading-relaxed font-sans font-light">
+                    <p className="text-lg lg:pt-12 text-white/80 leading-relaxed font-sans font-light">
                       Working with our partners to build secure and generational
                       wealth for our clients.
                     </p>
