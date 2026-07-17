@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { User, Phone, Mail, MapPin, Laptop, Award, Shield } from "lucide-react";
 import Image from "next/image";
 
-export default function AboutUs() {
+export default function TheTeam() {
   return (
     <>
       <Header />
