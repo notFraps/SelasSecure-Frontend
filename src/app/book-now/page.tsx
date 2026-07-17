@@ -56,7 +56,7 @@ export default function BookNow() {
 
           {/* Calendly Inline Widget */}
           <div className="bg-white rounded-3xl p-6 md:p-8 shadow-lg border border-slate-150">
-            <InlineWidget url="https://calendly.com/owolama-selasecurefinancial" />
+            <InlineWidget url="https://calendly.com/ogaatdtop-selasecurefinancial" />
           </div>
         </section>
       </main>

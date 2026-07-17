@@ -121,19 +121,19 @@ export default function Header() {
     },
     {
       name: "RESP, RRSP, TFSA & FHSA Optimization",
-      href: "/group-benefits-rrsp",
+      href: "/rrsp-accounts",
       desc: "Get better investment advice for these accounts",
       icon: FileSpreadsheet,
     },
     {
       name: "Health Insurance Planning",
-      href: "/hsa",
+      href: "/health-insurance",
       desc: "Supplemental health coverage",
       icon: FileHeart,
     },
     {
       name: "Group Benefits",
-      href: "/group-benefits-rrsp",
+      href: "/group-benefits",
       desc: "Employee retention strategies for businesses",
       icon: UsersRound,
     },
@@ -150,14 +150,14 @@ export default function Header() {
       icon: HandCoins,
     },
     {
-      name: "Debt Restructuring Referrals",
-      href: "/debt-restructuring",
+      name: "Debt Restructuring Referral",
+      href: "/debt-restructuring-referral",
       desc: "Professional debt management solutions",
       icon: Building,
     },
     {
       name: "Other Financial Services",
-      href: "/other-services",
+      href: "/contact",
       desc: "Other Complimentary Financial Services",
       icon: HelpCircle,
     },
@@ -214,7 +214,7 @@ export default function Header() {
                       Mission
                     </Link>
                     <Link
-                      href="/about-us"
+                      href="/meet-the-team"
                       className="block rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-blue"
                     >
                       Meet the Team

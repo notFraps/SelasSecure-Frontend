@@ -16,10 +16,33 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://selasecurefinancial.com"),
   title: "SelaSecure Financial",
-  description: "Created by John",
+  description: "Secure. Generational. Wealth.",
   icons: {
     icon: "/logonob.ico",
+  },
+  openGraph: {
+    title: "SelaSecure Financial",
+    description: "Secure. Generational. Wealth.",
+    url: "https://selasecurefinancial.com",
+    siteName: "SelaSecure Financial",
+    images: [
+      {
+        url: "/logonob.ico",
+        width: 1200,
+        height: 630,
+        alt: "SelaSecure Financial",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SelaSecure Financial",
+    description: "Secure. Generational. Wealth.",
+    images: ["/logonob.ico"],
   },
 };
 

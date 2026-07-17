@@ -50,17 +50,16 @@ export default function CorporateFinancialPlanning() {
 
       <main className="flex-grow bg-slate-50/50">
         {/* Page Header */}
-        <section className="bg-brand-blue text-white py-16 md:py-20 relative overflow-hidden">
+        <section className="bg-brand-lightblue text-white py-16 md:py-20 relative overflow-hidden">
           <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-brand-lightblue/10 blur-3xl" />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10">
             <h1 className="text-3xl font-bold md:text-5xl font-serif">
               Corporate Financial Planning
             </h1>
             <p className="text-sm md:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
-              How we work with you to turn complex Corporate Financial
-              decisions into a clear, actionable plan. All stakeholders
-              actively involved in the corporation/business are
-              carried along in this process.
+              How we work with you to turn complex Corporate Financial decisions
+              into a clear, actionable plan. All stakeholders actively involved
+              in the corporation/business are carried along in this process.
             </p>
           </div>
         </section>

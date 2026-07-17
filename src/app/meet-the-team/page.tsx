@@ -3,14 +3,14 @@ import Footer from "@/components/Footer";
 import { User, Phone, Mail, MapPin, Laptop, Award, Shield } from "lucide-react";
 import Image from "next/image";
 
-export default function AboutUs() {
+export default function MeetTheTeam() {
   return (
     <>
       <Header />
 
       <main className="flex-grow bg-slate-50/50">
         {/* Page Header */}
-        <section className="bg-brand-blue text-white py-16 md:py-20 relative overflow-hidden">
+        <section className="bg-brand-lightblue text-white py-16 md:py-20 relative overflow-hidden">
           <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-brand-lightblue/10 blur-3xl" />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10">
             <h1 className="text-3xl font-bold md:text-5xl font-serif">
@@ -46,7 +46,7 @@ export default function AboutUs() {
                       Esla Allanana
                     </h2>
                     <p className="text-xs font-bold uppercase tracking-wider text-brand-lightblue">
-                      Financial Consultant
+                      Financial Consultant & Founder
                     </p>
                     <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-xs text-slate-500 pt-2">
                       {/* <span className="flex items-center justify-center sm:justify-start gap-1">
@@ -223,7 +223,7 @@ export default function AboutUs() {
                       </p>
                       <p className="text-xs text-slate-500 mt-0.5">
                         Comprehensive consults conducted via Zoom for clients in
-                        Canada and environs.
+                        Canada and USA.
                       </p>
                     </div>
                   </div>

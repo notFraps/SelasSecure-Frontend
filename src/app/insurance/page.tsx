@@ -44,7 +44,7 @@ export default function InsurancePlanning() {
 
       <main className="flex-grow bg-slate-50/50">
         {/* Page Header */}
-        <section className="bg-brand-blue text-white py-16 md:py-20 relative overflow-hidden">
+        <section className="bg-brand-lightblue text-white py-16 md:py-20 relative overflow-hidden">
           <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-brand-lightblue/10 blur-3xl" />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10">
             <h1 className="text-3xl font-bold md:text-5xl font-serif">

@@ -19,17 +19,18 @@ export default function HealthPlans() {
   return (
     <>
       <Header />
-      
+
       <main className="flex-grow bg-slate-50/50">
         {/* Page Header */}
-        <section className="bg-brand-blue text-white py-16 md:py-20 relative overflow-hidden">
+        <section className="bg-brand-lightblue text-white py-16 md:py-20 relative overflow-hidden">
           <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-brand-lightblue/10 blur-3xl" />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10">
             <h1 className="text-3xl font-bold md:text-5xl font-serif">
               Health Plans
             </h1>
             <p className="text-sm md:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
-              Comprehensive health coverage solutions designed to support your employees and optimize your corporate structure.
+              Comprehensive health coverage solutions designed to support your
+              employees and optimize your corporate structure.
             </p>
           </div>
         </section>
@@ -44,13 +45,21 @@ export default function HealthPlans() {
                 </h2>
                 <div className="space-y-4 text-slate-650 text-sm leading-relaxed">
                   <p>
-                    The job market is highly competitive, and employers need to do everything they can to stand out. A group benefits plan is a primary way to separate your business from the competition.
+                    The job market is highly competitive, and employers need to
+                    do everything they can to stand out. A group benefits plan
+                    is a primary way to separate your business from the
+                    competition.
                   </p>
                   <p>
-                    It helps your employees cover healthcare costs that provincial healthcare (like AHCIP or MSP) does not cover, including prescription drugs, paramedical therapies, dental cleaning, vision care, and medical travel.
+                    It helps your employees cover healthcare costs that
+                    provincial healthcare (like AHCIP or MSP) does not cover,
+                    including prescription drugs, paramedical therapies, dental
+                    cleaning, vision care, and medical travel.
                   </p>
                   <p>
-                    A group benefits plan can also be combined with a retirement savings plan to help your employees secure their health and reach their financial goals sooner.
+                    A group benefits plan can also be combined with a retirement
+                    savings plan to help your employees secure their health and
+                    reach their financial goals sooner.
                   </p>
                 </div>
               </div>
@@ -64,7 +73,9 @@ export default function HealthPlans() {
                   Empowering Workplace Health
                 </h3>
                 <p className="text-xs text-slate-500 leading-normal">
-                  SelasSecure Financial partners with Canada's top underwriters to structure custom plans. We offer flexible parameters so you pay only for what your staff needs, avoiding waste.
+                  SelasSecure Financial partners with Canada's top underwriters
+                  to structure custom plans. We offer flexible parameters so you
+                  pay only for what your staff needs, avoiding waste.
                 </p>
               </div>
             </div>
@@ -75,7 +86,6 @@ export default function HealthPlans() {
         <section className="py-20 border-t border-slate-100">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              
               {/* Left: Employees */}
               <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-slate-100 space-y-6">
                 <h3 className="text-xl font-bold text-brand-blue font-serif flex items-center gap-2">
@@ -88,7 +98,9 @@ export default function HealthPlans() {
                       <div className="flex h-5 w-5 items-center justify-center rounded-full bg-brand-muted text-brand-green shrink-0 mt-0.5">
                         <Check className="h-3 w-3" />
                       </div>
-                      <span className="leading-relaxed font-medium">{item}</span>
+                      <span className="leading-relaxed font-medium">
+                        {item}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -106,12 +118,13 @@ export default function HealthPlans() {
                       <div className="flex h-5 w-5 items-center justify-center rounded-full bg-brand-muted text-brand-blue shrink-0 mt-0.5">
                         <Check className="h-3 w-3" />
                       </div>
-                      <span className="leading-relaxed font-medium">{item}</span>
+                      <span className="leading-relaxed font-medium">
+                        {item}
+                      </span>
                     </li>
                   ))}
                 </ul>
               </div>
-
             </div>
           </div>
         </section>
@@ -123,7 +136,9 @@ export default function HealthPlans() {
               Elevate Your Employee Strategy
             </h2>
             <p className="text-slate-600 text-sm leading-relaxed max-w-xl mx-auto">
-              Ready to learn more? Book your free introductory call or reach out via our contact page. We would love to help you build confidence in your team's health plans.
+              Ready to learn more? Book your free introductory call or reach out
+              via our contact page. We would love to help you build confidence
+              in your team's health plans.
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-2">
               <Link

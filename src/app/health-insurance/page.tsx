@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Activity, ShieldCheck, Landmark, CheckCircle, Percent, Calendar, ChevronRight } from "lucide-react";
 
-export default function HealthSpendingAccounts() {
+export default function HealthInsurance() {
   const points = [
     {
       title: "100% Business Write-Off",
@@ -26,17 +26,18 @@ export default function HealthSpendingAccounts() {
   return (
     <>
       <Header />
-      
+
       <main className="flex-grow bg-slate-50/50">
         {/* Page Header */}
-        <section className="bg-brand-blue text-white py-16 md:py-20 relative overflow-hidden">
+        <section className="bg-brand-lightblue text-white py-16 md:py-20 relative overflow-hidden">
           <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-brand-lightblue/10 blur-3xl" />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10">
             <h1 className="text-3xl font-bold md:text-5xl font-serif">
-              Health Spending Accounts (HSA)
+              Health Insurance Planning
             </h1>
             <p className="text-sm md:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
-              Put more control in your hands with a flexible, digital HSA that fits your company's lifestyle and delivers massive tax savings.
+              Put more control in your hands with a flexible, digital HSA that
+              fits your company's lifestyle and delivers massive tax savings.
             </p>
           </div>
         </section>
@@ -51,10 +52,16 @@ export default function HealthSpendingAccounts() {
                 </h2>
                 <div className="space-y-4 text-slate-650 text-sm leading-relaxed">
                   <p>
-                    An HSA (classified by the Canada Revenue Agency as a Private Health Services Plan) is an approved method to provide dental, medical, and vision benefits in a highly tax-efficient manner.
+                    A Health Spending Account (HSA) classified as an approved method to provide
+                    dental, medical, and vision benefits in a highly
+                    tax-efficient manner.
                   </p>
                   <p>
-                    Rather than paying monthly premiums for coverages your staff may never use, you allocate a set spending limit per employee class. The employee incurs eligible expenses, submits the receipt digitally, and receives a 100% tax-free reimbursement while your corporation writes off the cost.
+                    Rather than paying monthly premiums for coverages your staff
+                    may never use, you allocate a set spending limit per
+                    employee class. The employee incurs eligible expenses,
+                    submits the receipt digitally, and receives a 100% tax-free
+                    reimbursement while your corporation writes off the cost.
                   </p>
                 </div>
               </div>
@@ -68,7 +75,11 @@ export default function HealthSpendingAccounts() {
                   CRA Approved Strategy
                 </h3>
                 <p className="text-xs text-slate-500 leading-normal">
-                  SelasSecure Financial configures Health Spending Accounts strictly in alignment with Canada Revenue Agency guidelines. Eligible expenses cover all standard medical practitioner services, dental treatments, vision prescriptions, and private therapy.
+                  SelasSecure Financial configures Health Spending Accounts
+                  strictly in alignment with Canada Revenue Agency guidelines.
+                  Eligible expenses cover all standard medical practitioner
+                  services, dental treatments, vision prescriptions, and private
+                  therapy.
                 </p>
               </div>
             </div>
@@ -83,7 +94,8 @@ export default function HealthSpendingAccounts() {
                 Key Advantages of an HSA
               </h2>
               <p className="text-sm text-slate-500 max-w-md mx-auto">
-                Explore why business owners choose Health Spending Accounts over or alongside traditional health policies.
+                Explore why business owners choose Health Spending Accounts over
+                or alongside traditional health policies.
               </p>
             </div>
 
@@ -115,7 +127,8 @@ export default function HealthSpendingAccounts() {
               Start Saving on Corporate Health Costs
             </h2>
             <p className="text-slate-600 text-sm leading-relaxed max-w-xl mx-auto">
-              Our specialists will help set up your HSA structure, define employee categories, and launch your digital submissions portal.
+              Our specialists will help set up your HSA structure, define
+              employee categories, and launch your digital submissions portal.
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-2">
               <Link

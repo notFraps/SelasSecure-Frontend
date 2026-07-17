@@ -50,15 +50,17 @@ export default function FamilyFinancialPlanning() {
 
       <main className="flex-grow bg-slate-50/50">
         {/* Page Header */}
-        <section className="bg-brand-blue text-white py-16 md:py-20 relative overflow-hidden">
+        <section className="bg-brand-lightblue text-white py-16 md:py-20 relative overflow-hidden">
           <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-brand-lightblue/10 blur-3xl" />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10">
             <h1 className="text-3xl font-bold md:text-5xl font-serif">
               Family Financial Planning
             </h1>
             <p className="text-sm md:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
-              How we work with families to turn complex Family Financial decisions into a clear, actionable plan. 
-              All family members actively involved in the financial decisions of the family are carried along in this process.
+              How we work with families to turn complex Family Financial
+              decisions into a clear, actionable plan. All family members
+              actively involved in the financial decisions of the family are
+              carried along in this process.
             </p>
           </div>
         </section>
@@ -116,8 +118,8 @@ export default function FamilyFinancialPlanning() {
             </h2>
             <p className="text-slate-600 text-sm leading-relaxed max-w-xl mx-auto">
               Our initial discovery consultation is free, confidential, and
-              carries no obligation. Let&apos;s discuss how we can securely build
-              generatoinal wealth for your family.
+              carries no obligation. Let&apos;s discuss how we can securely
+              build generatoinal wealth for your family.
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-2">
               <Link
