@@ -214,7 +214,7 @@ export default function Header() {
                       Mission
                     </Link>
                     <Link
-                      href="/the-team"
+                      href="/about-us"
                       className="block rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-blue"
                     >
                       Meet the Team
