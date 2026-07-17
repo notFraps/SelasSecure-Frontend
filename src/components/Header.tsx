@@ -214,7 +214,7 @@ export default function Header() {
                       Mission
                     </Link>
                     <Link
-                      href="/about-us"
+                      href="/meet-the-team"
                       className="block rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-blue"
                     >
                       Meet the Team
@@ -324,7 +324,7 @@ export default function Header() {
         <div className="md:hidden border-t border-slate-100 bg-white/95 backdrop-blur-md animate-in slide-in-from-top-4 duration-300">
           <div className="space-y-1 px-4 py-6">
             <Link
-              href="/about-us"
+              href="/meet-the-team"
               onClick={() => setIsOpen(false)}
               className="block rounded-xl px-4 py-3 text-base font-semibold text-slate-800 hover:bg-slate-50 hover:text-brand-blue"
             >
