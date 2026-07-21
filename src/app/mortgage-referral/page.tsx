@@ -3,6 +3,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { useState } from "react";
+import { useFirestoreSubmit } from "@/hooks/useFirestoreSubmit";
 
 export default function MortgageReferral() {
   const [formData, setFormData] = useState({
@@ -15,6 +16,10 @@ export default function MortgageReferral() {
     email: "",
   });
 
+  const { status, errorMessage, submit, reset } = useFirestoreSubmit(
+    "mortgageReferrals",
+  );
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
   ) => {
@@ -22,10 +27,47 @@ export default function MortgageReferral() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Form submitted! We’ll reach out soon.");
+    const ok = await submit(formData, {
+      source: "mortgage-referral-page",
+    });
+    if (ok) {
+      setFormData({
+        fullName: "",
+        streetAddress: "",
+        city: "",
+        province: "",
+        postalCode: "",
+        phone: "",
+        email: "",
+      });
+    }
   };
+  if (status === "success") {
+      return (
+        <>
+          <Header />
+          <main className="min-h-screen bg-slate-50 py-16 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-2xl p-8 text-center">
+              <h1 className="text-3xl font-bold text-brand-blue mb-4 font-serif">
+                Referral Received
+              </h1>
+              <p className="text-slate-600 leading-relaxed">
+                Thank you — we&apos;ll reach out soon.
+              </p>
+              <button
+                onClick={reset}
+                className="mt-8 rounded-xl bg-brand-blue px-6 py-2.5 text-sm font-bold text-white shadow-md hover:bg-[#0e487d] transition-colors"
+              >
+                Submit Another Referral
+              </button>
+            </div>
+          </main>
+          <Footer />
+        </>
+      );
+    }
 
   return (
     <>

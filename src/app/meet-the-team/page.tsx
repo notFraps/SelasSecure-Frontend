@@ -241,12 +241,27 @@ export default function MeetTheTeam() {
                   structured, confidential advisory spaces for financial
                   services, wealth securing, and long-term planning.
                 </p>
-                <div className="h-44 rounded-2xl bg-gradient-to-tr from-slate-200 to-slate-100 flex items-center justify-center text-slate-400 font-bold text-xs border border-slate-200 uppercase tracking-widest relative overflow-hidden">
-                  <MapPin className="w-8 h-8 text-brand-green absolute" />
-                  <div className="absolute inset-x-0 bottom-0 bg-white/70 py-2.5 text-center text-[10px] text-slate-600 font-semibold border-t border-slate-200">
-                    Centrepointe Financial Centre Office Space
+
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=84+Centerpointe+Drive,+Ottawa,+ON+K2G+6B1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block h-44 rounded-2xl overflow-hidden border border-slate-200 relative"
+                >
+                  <iframe
+                    src="https://www.google.com/maps?q=84+Centerpointe+Drive,+Ottawa,+ON+K2G+6B1&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0, pointerEvents: "none" }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                  <div className="absolute inset-0 bg-transparent group-hover:bg-black/10 transition-colors" />
+                  <div className="absolute inset-x-0 bottom-0 bg-white/90 py-2.5 text-center text-[10px] text-slate-700 font-semibold border-t border-slate-200 flex items-center justify-center gap-1.5">
+                    <MapPin className="w-3.5 h-3.5 text-brand-green" />
+                    Get Directions to Centrepointe Financial Centre
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
