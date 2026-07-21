@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "SelaSecure Financial",
     images: [
       {
-        url: "/logonob.ico",
+        url: "/logo.jpg",
         width: 1200,
         height: 630,
         alt: "SelaSecure Financial",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SelaSecure Financial",
     description: "Secure. Generational. Wealth.",
-    images: ["/logonob.ico"],
+    images: ["/logo.jpg"],
   },
 };
 
