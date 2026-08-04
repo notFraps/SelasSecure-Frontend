@@ -28,7 +28,19 @@ export default function SavingYourFuture() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const ok = await submit(formData, { source: "saving-your-future-page" });
+
     if (ok) {
+      // Fire the automated email — don't block the success UI on this
+      fetch("/api/send-book-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          bookType: formData.bookType,
+        }),
+      }).catch((err) => console.error("Email trigger failed:", err));
+
       setFormData({ name: "", email: "", phone: "", bookType: "Ebook" });
     }
   };
@@ -46,10 +58,10 @@ export default function SavingYourFuture() {
               SAVING YOUR FUTURE
             </h1>
             <p className="text-sm md:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
-              Thank you for your interest in a Free Copy of the book titled
-              &quot;Saving Your Future.&quot; A PDF eBook can be emailed to you,
-              and if you&apos;d prefer a paperback, we&apos;ll email you
-              instructions on how to get it in Ottawa.
+              Thank you for your interest in a FREE COPY of the book titled
+              &quot;Saving Your Future.&quot; Fill out the form below to receive
+              your copy via email, and if you&apos;d like a paperback version,
+              we&apos;ll send you instructions on how to get it in Ottawa.
             </p>
           </div>
         </section>
@@ -83,7 +95,7 @@ export default function SavingYourFuture() {
               >
                 <div>
                   <label className="block text-sm font-medium text-slate-700">
-                    Name
+                    Full Name
                   </label>
                   <input
                     type="text"

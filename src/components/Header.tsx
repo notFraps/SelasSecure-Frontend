@@ -18,7 +18,8 @@ import {
   CalendarHeart,
   FileHeart,
   HandCoins,
-  Building
+  Building,
+  BookAIcon
 } from "lucide-react";
 
 export default function Header() {
@@ -26,9 +27,11 @@ export default function Header() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [isCampaignsOpen, setIsCampaignsOpen] = useState(false);
 
   const aboutTimeout = useRef<NodeJS.Timeout | null>(null);
   const servicesTimeout = useRef<NodeJS.Timeout | null>(null);
+  const campaignsTimeout = useRef<NodeJS.Timeout | null>(null);
   
   useEffect(() => {
     let tries = 0;
@@ -93,6 +96,25 @@ export default function Header() {
       setIsServicesOpen(false);
     }, 300);
   }
+  const handleCampaignsMouseEnter = () => {
+    if (campaignsTimeout.current) {
+      clearTimeout(campaignsTimeout.current);
+    }
+    setIsCampaignsOpen(true);
+  }
+  const handleCampaignsMouseLeave = () => {
+    campaignsTimeout.current = setTimeout(() => {
+      setIsCampaignsOpen(false);
+    }, 300);
+  }
+  const ourCampaigns = [
+    {
+      name: "Saving Your Future",
+      href: "/saving-your-future",
+      desc: "Free eBook and Paperback",
+      icon: BookAIcon,
+    },
+  ];
 
   const services = [
     {
@@ -244,6 +266,56 @@ export default function Header() {
                 <div className="absolute left-1/2 z-10 mt-1 w-96 -translate-x-1/2 rounded-2xl bg-white p-4 shadow-xl border border-slate-100 ring-1 ring-black/5 animate-in fade-in slide-in-from-top-2 duration-200">
                   <div className="grid gap-2">
                     {services.map((item) => {
+                      const Icon = item.icon;
+                      return (
+                        <div
+                          key={item.name}
+                          className="relative group flex items-start gap-3 rounded-xl p-2.5 transition-colors hover:bg-slate-50 group"
+                        >
+                          {/* Normal link for every item */}
+                          <Link
+                            href={item.href}
+                            className="flex items-start gap-3 flex-1"
+                          >
+                            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-muted text-brand-blue shrink-0">
+                              <Icon className="h-5 w-5" />
+                            </div>
+                            <div>
+                              <p className="text-sm font-semibold text-brand-blue">
+                                {item.name}
+                              </p>
+                              <p className="text-xs text-slate-500 mt-0.5">
+                                {item.desc}
+                              </p>
+                            </div>
+                          </Link>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <div
+              className="relative"
+              onMouseEnter={() => handleCampaignsMouseEnter()}
+              onMouseLeave={() => handleCampaignsMouseLeave()}
+            >
+              <button
+                className="flex items-center gap-1.5 text-sm font-semibold text-slate-700 hover:text-brand-blue transition-colors focus:outline-none"
+                aria-expanded={isCampaignsOpen}
+              >
+                Our Campaigns
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-200 ${isCampaignsOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+
+              {isCampaignsOpen && (
+                <div className="absolute left-1/2 z-10 mt-1 w-96 -translate-x-1/2 rounded-2xl bg-white p-4 shadow-xl border border-slate-100 ring-1 ring-black/5 animate-in fade-in slide-in-from-top-2 duration-200">
+                  <div className="grid gap-2">
+                    {ourCampaigns.map((item) => {
                       const Icon = item.icon;
                       return (
                         <div
