@@ -1,6 +1,6 @@
 // lib/firebaseClient.ts
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { initializeApp, getApps, getApp } from "firebase/app";
+import { initializeFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -11,10 +11,11 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
-console.log("Firebase config:", firebaseConfig);
+// Initialize Firebase (reuse existing app if one already exists)
+const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-// Initialize Cloud Firestore and get a reference to the service
-export const db = getFirestore(app);
+// Initialize Cloud Firestore with long-polling auto-detection,
+// so it works reliably on mobile networks and restrictive proxies
+export const db = initializeFirestore(app, {
+  experimentalAutoDetectLongPolling: true,
+});

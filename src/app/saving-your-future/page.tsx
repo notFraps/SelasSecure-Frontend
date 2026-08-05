@@ -95,7 +95,7 @@ export default function SavingYourFuture() {
               >
                 <div>
                   <label className="block text-sm font-medium text-slate-700">
-                    Name
+                    Full Name
                   </label>
                   <input
                     type="text"
