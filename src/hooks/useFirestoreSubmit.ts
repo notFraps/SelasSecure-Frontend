@@ -6,6 +6,15 @@ import { addDoc, collection } from "firebase/firestore";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
+function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
+  return Promise.race([
+    promise,
+    new Promise<T>((_, reject) =>
+      setTimeout(() => reject(new Error("TIMEOUT")), ms),
+    ),
+  ]);
+}
+
 export function useFirestoreSubmit<T extends Record<string, unknown>>(
   collectionName: string,
 ) {
@@ -15,18 +24,29 @@ export function useFirestoreSubmit<T extends Record<string, unknown>>(
   const submit = async (data: T, extraFields?: Record<string, unknown>) => {
     setStatus("submitting");
     setErrorMessage(null);
+    console.log(`[${collectionName}] submit starting`, { data, extraFields });
 
     try {
-      await addDoc(collection(db, collectionName), {
-        ...data,
-        ...extraFields,
-        timestamp: new Date(),
-      });
+      const docRef = await withTimeout(
+        addDoc(collection(db, collectionName), {
+          ...data,
+          ...extraFields,
+          timestamp: new Date(),
+        }),
+        15000,
+      );
+      console.log(`[${collectionName}] submit succeeded`, docRef.id);
       setStatus("success");
       return true;
     } catch (err) {
-      console.error(`${collectionName} submit error:`, err);
-      setErrorMessage("Something went wrong. Please try again.");
+      console.error(`[${collectionName}] submit error:`, err);
+      if (err instanceof Error && err.message === "TIMEOUT") {
+        setErrorMessage(
+          "This is taking longer than expected. Please check your connection and try again.",
+        );
+      } else {
+        setErrorMessage("Something went wrong. Please try again.");
+      }
       setStatus("error");
       return false;
     }
