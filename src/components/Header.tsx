@@ -444,6 +444,32 @@ export default function Header() {
                 </div>
               )}
             </div>
+            <div>
+              <button
+                onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-base font-semibold text-slate-800 hover:bg-slate-50 hover:text-brand-blue"
+              >
+                Our Campaigns
+                <ChevronDown
+                  className={`h-5 w-5 transition-transform duration-200 ${isMobileServicesOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+
+              {isMobileServicesOpen && (
+                <div className="mt-1 ml-4 border-l-2 border-slate-100 pl-4 space-y-1">
+                  {ourCampaigns.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+                      className="block rounded-xl px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-brand-blue"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             <Link
               href="/faq"
@@ -470,29 +496,6 @@ export default function Header() {
                 <Calendar className="w-5 h-5" />
                 Book Now
               </Link>
-              {/* npm install firebase
-
-              // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyDYF42CW57JmX_ga5lYkO7gtVVFZmu0xDQ",
-  authDomain: "selafinancial-babf3.firebaseapp.com",
-  projectId: "selafinancial-babf3",
-  storageBucket: "selafinancial-babf3.firebasestorage.app",
-  messagingSenderId: "390356787455",
-  appId: "1:390356787455:web:ea298a9cf984d8a3266cca",
-  measurementId: "G-TF7QXFHJCP"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app); */}
             </div>
           </div>
         </div>
