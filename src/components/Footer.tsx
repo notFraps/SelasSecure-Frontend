@@ -158,7 +158,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/other-financial-services"
+                  href="/contact"
                   className="hover:text-white transition-colors"
                 >
                   Other Financial Services

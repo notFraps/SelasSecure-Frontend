@@ -55,35 +55,35 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 -z-10 h-[500px] w-[500px] rounded-full bg-slate-100 opacity-60 blur-3xl" />
 
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 gap-2 lg:grid-cols-12 lg:items-center">
+            <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-8 lg:gap-12 md:items-center">
               {/* Hero Left Content */}
-              <div className="space-y-6 lg:col-span-6">
+              <div className="space-y-6 md:col-span-6 lg:col-span-6">
                 <div className="inline-flex items-center gap-2 rounded-full bg-brand-muted px-4 py-1.5 text-sm font-semibold text-brand-blue border border-brand-lightblue/20">
                   <Shield className="w-4 h-4 text-brand-green" />
                   Your Trusted Financial Professionals
                 </div>
-                <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl font-serif text-brand-blue leading-[1.1]">
+                <h1 className="text-3xl sm:text-4xl md:text-3xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight font-serif text-brand-blue leading-[1.15]">
                   Financial Planning <br />
                   and Advice in <br />
                   <span className="text-gradient">Canada and the USA</span>
                 </h1>
-                <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
+                <p className="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
                   We guide individuals, families, and business owners through
                   comprehensive planning, custom group benefits for employees
                   and other personal, family, and corporate financial
                   strategies.
                 </p>
-                <div className="flex flex-wrap gap-4 pt-3">
+                <div className="flex flex-wrap gap-3 sm:gap-4 pt-3">
                   <Link
                     href="/book-now"
-                    className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-blue to-[#0e487d] px-7 py-4 font-bold text-white shadow-lg hover:shadow-brand-blue/30 transition-all hover:-translate-y-0.5 active:translate-y-0"
+                    className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-blue to-[#0e487d] px-6 sm:px-7 py-3.5 sm:py-4 font-bold text-white shadow-lg hover:shadow-brand-blue/30 transition-all hover:-translate-y-0.5 active:translate-y-0 text-sm sm:text-base"
                   >
                     <Calendar className="w-5 h-5" />
                     Book Free Consultation
                   </Link>
                   <Link
                     href="/about-us"
-                    className="flex items-center gap-2 rounded-xl bg-white border border-slate-200 px-7 py-4 font-bold text-slate-700 hover:text-brand-blue hover:border-brand-lightblue shadow-sm transition-all hover:-translate-y-0.5 active:translate-y-0"
+                    className="flex items-center gap-2 rounded-xl bg-white border border-slate-200 px-6 sm:px-7 py-3.5 sm:py-4 font-bold text-slate-700 hover:text-brand-blue hover:border-brand-lightblue shadow-sm transition-all hover:-translate-y-0.5 active:translate-y-0 text-sm sm:text-base"
                   >
                     Meet the Team
                     <ArrowRight className="w-4 h-4" />
@@ -92,27 +92,24 @@ export default function Home() {
               </div>
 
               {/* Hero Right Graphic */}
-              <div className="lg:col-span-6 flex justify-center">
-                <div className="relative w-full max-w-lg aspect-square rounded-[2.5rem] bg-gradient-to-tr from-brand-blue to-brand-lightblue p-6 shadow-2xl shadow-brand-blue/20 flex flex-col overflow-hidden">
-                  {/* Decorative curved shape resembling the logo ground line */}
-
-                  <div className="z-5 flex items-center bg-white rounded-[2.5rem] justify-center">
-                    <div className="flex gap-2">
-                      <Image
-                        src="/company.png"
-                        alt="Logo"
-                        width={300}
-                        height={200}
-                        className=" bg-white rounded-[2.5rem] w-36 md:w-48 lg:w-64 h-auto border-white"
-                      />
-                    </div>
+              <div className="md:col-span-6 lg:col-span-6 flex justify-center w-full">
+                <div className="relative w-full max-w-md lg:max-w-lg rounded-3xl lg:rounded-[2.5rem] bg-gradient-to-tr from-brand-blue to-brand-lightblue p-5 sm:p-6 lg:p-7 shadow-2xl shadow-brand-blue/20 flex flex-col overflow-hidden">
+                  <div className="flex items-center justify-center bg-white rounded-2xl lg:rounded-3xl p-4 sm:p-5 lg:p-6 shadow-sm">
+                    <Image
+                      src="/company.png"
+                      alt="SelasSecure Financial Logo"
+                      width={400}
+                      height={400}
+                      className="w-36 sm:w-44 md:w-40 lg:w-52 xl:w-60 h-auto object-contain"
+                      priority
+                    />
                   </div>
 
-                  <div className="z-10 text-white py-4 space-y-3">
-                    <p className="text-2xl lg:pt-4 font-semibold tracking-wider uppercase text-brand-green">
+                  <div className="text-white pt-4 sm:pt-5 lg:pt-6 space-y-2 sm:space-y-3">
+                    <p className="text-lg sm:text-xl lg:text-2xl font-bold tracking-wider uppercase text-brand-green">
                       Our Core Mandate
                     </p>
-                    <p className="text-lg lg:pt-12 text-white/80 leading-relaxed font-sans font-light">
+                    <p className="text-sm sm:text-base lg:text-lg text-white/85 leading-relaxed font-sans font-light">
                       Working with our partners to build secure and generational
                       wealth for our clients.
                     </p>
